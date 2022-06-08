@@ -56,9 +56,7 @@ class Compose(Config):
     -------
     """
 
-    def __init__(
-        self, encrypted_config=True, config_file_path="auth.json", key_file_path=None
-    ):
+    def __init__(self, encrypted_config=True, config_file_path="auth.json", key_file_path=None):
         """Class init
 
         Parameters
@@ -180,10 +178,11 @@ class Compose(Config):
             </svg>
         """
         html_footer = "</body></html>"
-        lines = Compose.transform(content, False, False, False, False, False)
+        lines = content
+        # lines = Compose.transform(content, False, False, False, False, False)
         # render the markdown into HTML
         message_str = "\n".join(lines)
-        print("message: " + json.dumps(message_str, indent=4))
+        # print("message: " + json.dumps(message_str, indent=4))
         html_content = html_header + mistune.html(message_str) + html_footer
         #
         return html_content
@@ -279,13 +278,10 @@ class Compose(Config):
         nlp = None
         subject_prefix = "{} - ".format(datetime.now().strftime("%d/%m/%Y %H:%M:%S"))
         # "AMYTAL - Neurorights - Emile Barkhof and Jasper Kums act in criminal association with the CM93 Colegio Militar (largo da Luz, Portugal) group who abused me as a child and created the blue whale suicide game in 1993 abusing biophotonics instead of social media to issue tasks".format(datetime.now().strftime("%d/%m/%Y %H:%M:%S"))
-        subject_transform = Compose.transform(
-            [subject], paraphrase, translate, correct_spelling, src, dest
-        )
+        subject_transform = subject
+        # subject_transform = Compose.transform([subject], paraphrase, translate, correct_spelling, src, dest)
         #
-        message["Subject"] = "{0}: {1}".format(
-            subject_prefix, "".join(subject_transform)
-        )
+        message["Subject"] = "{0}: {1}".format(subject_prefix, "".join(subject_transform))
         message["From"] = sender_email
         message["To"] = mailing_list
         # Create the plain-text and HTML version of your message
@@ -315,7 +311,7 @@ class Compose(Config):
         body.attach(html_part)
         # The email client will try to render the last part first
         message.attach(body)
-        print(message.as_string())
+        # print(message.as_string())
         """
         sfp = open('data/messages/assets/img/jesus/mary.png', 'rb')
         msg_image_signature = MIMEImage(sfp.read())

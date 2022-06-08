@@ -40,9 +40,7 @@ class Scrape(Config):
         Generates a new encryption key from a password + salt
     """
 
-    def __init__(
-        self, encrypted_config=True, config_file_path="auth.json", key_file_path=None
-    ):
+    def __init__(self, encrypted_config=True, config_file_path="auth.json", key_file_path=None):
         """Class init
 
         Parameters
@@ -131,9 +129,7 @@ class Scrape(Config):
         try:
             with open(csv_path, mode="a", newline="") as emails_file:
                 emails_file.truncate(0)
-                emails_writer = csv.writer(
-                    emails_file, delimiter=",", quotechar='"', quoting=csv.QUOTE_MINIMAL
-                )
+                emails_writer = csv.writer(emails_file, delimiter=",", quotechar='"', quoting=csv.QUOTE_MINIMAL)
                 emails_writer.writerow(["", "email"])
         except OSError as e:
             print("{} file error {}".format(csv_path, e.errno))
@@ -144,9 +140,7 @@ class Scrape(Config):
         try:
             with open(csv_path, mode="a", newline="") as phones_file:
                 phones_file.truncate(0)
-                phones_writer = csv.writer(
-                    phones_file, delimiter=",", quotechar='"', quoting=csv.QUOTE_MINIMAL
-                )
+                phones_writer = csv.writer(phones_file, delimiter=",", quotechar='"', quoting=csv.QUOTE_MINIMAL)
                 phones_writer.writerow(["", "phone"])
         except OSError as e:
             print("{} file error {}".format(csv_path, e.errno))
@@ -199,9 +193,7 @@ class Scrape(Config):
                     quotechar='"',
                     quoting=csv.QUOTE_MINIMAL,
                 )
-                unique_contacts = list(
-                    filter(lambda email: email not in self.emails, new_contacts)
-                )
+                unique_contacts = list(filter(lambda email: email not in self.emails, new_contacts))
                 for contact in unique_contacts:
                     print("\x1b[6;37;41m new email:{0} \x1b[0m".format(contact))
                     self.num_emails += 1
@@ -226,9 +218,7 @@ class Scrape(Config):
                     quotechar='"',
                     quoting=csv.QUOTE_MINIMAL,
                 )
-                unique_contacts = list(
-                    filter(lambda phone: phone not in self.phones, new_contacts)
-                )
+                unique_contacts = list(filter(lambda phone: phone not in self.phones, new_contacts))
                 for contact in unique_contacts:
                     print("\x1b[6;37;41m new phone:{0}\x1b[0m".format(contact))
                     self.num_phones += 1
@@ -304,14 +294,10 @@ class Scrape(Config):
                         # TorRequest object also exposes the underlying Stem controller
                         # and Requests session objects for more flexibility.
                         print(type(tr.ctrl))  # a stem.control.Controller object
-                        tr.ctrl.signal(
-                            "CLEARDNSCACHE"
-                        )  # see Stem docs for the full API
+                        tr.ctrl.signal("CLEARDNSCACHE")  # see Stem docs for the full API
                         print(type(tr.session))  # a requests.Session object
                         c = cookiejar.CookieJar()
-                        tr.session.cookies.update(
-                            c
-                        )  # see Requests docs for the full API
+                        tr.session.cookies.update(c)  # see Requests docs for the full API
                         # Specify HTTP verb and url.
                         response = tr.get(url)
                         print(response.text)
@@ -321,9 +307,7 @@ class Scrape(Config):
                         # print(resp.json)
                 else:
                     proxies_dict = {}
-                    if "use_proxies" in self.scrape.keys() and str2bool(
-                        self.scrape["use_proxies"]
-                    ):
+                    if "use_proxies" in self.scrape.keys() and str2bool(self.scrape["use_proxies"]):
                         proxies_dict = self.scrape["proxies"]
                     #
                     response = requests.get(
@@ -371,9 +355,7 @@ class Scrape(Config):
             # find all the anchors
             anchors = soup.find_all("a")
             num_anchors = len(anchors)
-            print(
-                "> {0} new anchors {1}".format(threading.get_native_id(), num_anchors)
-            )
+            print("> {0} new anchors {1}".format(threading.get_native_id(), num_anchors))
             # process all the anchors
             count = 0
             for anchor in anchors:
@@ -384,13 +366,10 @@ class Scrape(Config):
                     link = base_url + link
                 elif not link.startswith("http"):
                     link = path + link
-                # don't scrape if not in same domain
-                link_ext = tldextract.extract(link)
-                print("{0}.domain - {1}.domain".format(base_ext, link_ext))
+                #
+                # print("{0}.domain - {1}.domain".format(base_ext, link_ext))
                 if base_ext.domain not in link:
-                    print(
-                        "Invalid link - link domain is outside domain of url being scraped..."
-                    )
+                    print("Invalid link - link domain is outside domain of url being scraped...")
                     continue
                 # add the new url to queue if not in unprocessed list nor in processed list
                 if validators.url(link) and link not in self.processed_urls:

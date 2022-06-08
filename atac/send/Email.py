@@ -66,9 +66,7 @@ class SendEmail(Send):
         Generates a new encryption key from a password + salt
     """
 
-    def __init__(
-        self, encrypted_config=True, config_file_path="auth.json", key_file_path=None
-    ):
+    def __init__(self, encrypted_config=True, config_file_path="auth.json", key_file_path=None):
         """Class init
 
         Parameters
@@ -104,11 +102,9 @@ class SendEmail(Send):
     def update_config(self):
         """Update email config"""
         auth, content = self.get_config()
-        # set sctive to next and save config
+        # set active to next and save config
         if self.email["rotate_content"]:
-            self.email["active_content"] = (1 + self.email["active_content"]) % len(
-                content
-            )
+            self.email["active_content"] = (1 + self.email["active_content"]) % len(content)
         # set active auth to next and save config
         if self.email["rotate_auth"]:
             self.email["active_auth"] = (1 + self.email["active_auth"]) % len(auth)
@@ -149,10 +145,7 @@ class SendEmail(Send):
                 lambda z: z.split(",")[1],
                 list(
                     filter(
-                        trace(
-                            lambda x: x.find(",") != -1
-                            and validators.email(x.split(",")[1])
-                        ),
+                        trace(lambda x: x.find(",") != -1 and validators.email(x.split(",")[1])),
                         lines,
                     )
                 ),
@@ -262,7 +255,10 @@ class SendEmail(Send):
             status = 1
             return status
         #
-        for ef in self.get_contact_files(email_files_path):
+        contact_files_paths = self.get_contact_files(email_files_path)
+        print(json.dumps(contact_files_paths, indent=4))
+        for ef in contact_files_paths:
+            print(contact_files_paths)
             email_list = get_file_content(ef)
             email_buckets = self.store_emails_in_buckets(email_list)
             self.send_emails_in_buckets(
@@ -299,7 +295,7 @@ class SendEmail(Send):
         """
         status = 0
         auth, _ = self.get_config()
-        print("send email > content file: " + json.dumps(message_content, indent=4))
+        # print("send email > content file: " + json.dumps(message_content, indent=4))
         message = Compose.compose_email(
             auth["sender"],
             mailing_list,
@@ -316,16 +312,12 @@ class SendEmail(Send):
                 print("Creating ssl context")
                 context = ssl.create_default_context()
                 print("Creating secure ssl/tls connection with server")
-                with smtplib.SMTP_SSL(
-                    auth["server"], auth["port"], context=context
-                ) as server:
+                with smtplib.SMTP_SSL(auth["server"], auth["port"], context=context) as server:
                     server.set_debuglevel(0)
-                    print("Logging into server:" + json.dumps(auth, indent=4))
+                    print("Logging into server:")  # + json.dumps(auth, indent=4))
                     server.login(auth["user"], auth["password"])
                     print("Sending email")
-                    error_status = server.sendmail(
-                        auth["sender"], mailing_list, message.as_string()
-                    )
+                    error_status = server.sendmail(auth["sender"], mailing_list, message.as_string())
                     print(error_status)
                     print("\x1b[6;37;42m Sent \x1b[0m")
                     server.quit()
@@ -349,9 +341,7 @@ class SendEmail(Send):
                     print("Logging into server")
                     server.login(auth["user"], auth["password"])
                     print("Sending email")
-                    error_status = server.sendmail(
-                        auth["sender"], mailing_list, message.as_string()
-                    )
+                    error_status = server.sendmail(auth["sender"], mailing_list, message.as_string())
                     print("send status:" + json.dumps(error_status, indent=4))
                     print("\x1b[6;37;42m Sent \x1b[0m")
                     server.quit()
@@ -569,10 +559,7 @@ class POP(Riseup):
             raw_email = b"\n".join(self.Mailbox.retr(i + 1)[1])
             parsed_email = email.message_from_bytes(raw_email)
             #
-            if (
-                self.subject in parsed_email["Subject"]
-                and self.month in parsed_email["Date"]
-            ):
+            if self.subject in parsed_email["Subject"] and self.month in parsed_email["Date"]:
                 #
                 payload = parsed_email.get_payload()[0]
                 body = payload.get_payload()
