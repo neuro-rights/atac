@@ -217,8 +217,8 @@ def art(arguments):
     message_text = None
     images_path = None
     gif_path = None
-    generate_gif = False
-    add_labels = False
+    generate_gifs = False
+    add_labels_to_images = False
     glob_pattern = "*.png"
     #
     if arguments.font_size:
@@ -234,11 +234,13 @@ def art(arguments):
         gif_path = getattr(arguments, "gif_path")
     if arguments.add_labels_to_images:
         add_labels_to_images = getattr(arguments, "add_labels_to_images")
+    if arguments.generate_gifs:
+        generate_gifs = getattr(arguments, "generate_gifs")
     #
     if add_labels_to_images and images_path:
         artist.add_labels_to_images_in_dir(images_path, glob_pattern, font_size)
     #
-    if generate_gif and images_path:
+    if generate_gifs and images_path:
         artist.generate_gifs_from_all_dirs(images_path, glob_pattern)
     #
     if message_text and gif_path:
@@ -491,7 +493,7 @@ if __name__ == "__main__":
     parser_art.add_argument("-m", dest="message_text", type=str, help="text message")
     parser_art.add_argument("-g", dest="gif_path", type=str, help="path to gif file")
     parser_art.add_argument("-p", dest="glob_pattern", type=str, help="glob_pattern")
-    parser_art.add_argument("-z", dest="generate_gif", action="store_true")
+    parser_art.add_argument("-z", dest="generate_gifs", action="store_true")
     parser_art.add_argument("-t", dest="art_type", choices=["sudoku", "invaders"])
     parser_art.add_argument("-v", dest="verbose")
     parser_art.set_defaults(func=art)
