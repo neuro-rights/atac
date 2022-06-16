@@ -24,15 +24,15 @@ def get_config_arguments(arguments):
     key_file_path = None
     config_file_path = "auth.json"
     #
-    if arguments.encrypted_config is not None:
+    if arguments.encrypted_config:
         encrypted_config = str2bool(getattr(arguments, "encrypted_config"))
         print("{} {}", encrypted_config, type(encrypted_config))
     #
-    if arguments.config_file is not None:
+    if arguments.config_file:
         config_file_path = getattr(arguments, "config_file")
         print("{} {}", config_file_path, type(config_file_path))
     #
-    if arguments.key_file is not None:
+    if arguments.key_file:
         key_file_path = getattr(arguments, "key_file")
     #
     return encrypted_config, config_file_path, key_file_path
@@ -55,18 +55,18 @@ def configuration(arguments):
     encrypted_config, config_file_path, key_file_path = get_config_arguments(arguments)
     config = atac.Config(encrypted_config, config_file_path, key_file_path)
     #
-    if arguments.generate_key_file is not None:
+    if arguments.generate_key_file:
         generate_key_file_path = getattr(arguments, "generate_key_file")
         if generate_key_file_path:
             config.generate_key()
             config.save_key(generate_key_file_path)
     #
-    if arguments.new_config_file is not None:
+    if arguments.new_config_file:
         new_config_file_path = getattr(arguments, "new_config_file")
         if new_config_file_path:
             config.new_config(new_config_file_path)
     #
-    if arguments.decrypted_config_file is not None:
+    if arguments.decrypted_config_file:
         decrypted_config_file_path = getattr(arguments, "decrypted_config_file")
         if decrypted_config_file_path:
             config.load_config()
@@ -108,11 +108,11 @@ def irc(arguments):
     encrypted_config, config_file_path, key_file_path = get_config_arguments(arguments)
     chat = atac.SendIRC(encrypted_config, config_file_path, key_file_path)
     #
-    if arguments.list_users is not None:
+    if arguments.list_users:
         list_users = getattr(arguments, "list_users")
-    if arguments.message_users is not None:
+    if arguments.message_users:
         message_users = getattr(arguments, "message_users")
-    if arguments.message_channels is not None:
+    if arguments.message_channels:
         message_channels = getattr(arguments, "message_channels")
     #
     chat.list_channels()
@@ -137,13 +137,13 @@ def email(arguments):
     subject = None
     email_files_path = os.path.dirname(os.path.abspath(__file__)) + "/data/contacts/emails/"
     #
-    if arguments.subject is not None:
+    if arguments.subject:
         subject = getattr(arguments, "subject")
-    if arguments.message_file is not None:
+    if arguments.message_file:
         message_file_path = getattr(arguments, "message_file")
-    if arguments.emails_file is not None:
+    if arguments.emails_file:
         email_files_path = getattr(arguments, "emails_file")
-    if arguments.target is not None:
+    if arguments.target:
         target = getattr(arguments, "target")
     #
     _, content = emailer.get_config()
@@ -186,11 +186,11 @@ def phone(arguments):
     target = "whatsapp"
     phone_files_path = os.path.dirname(os.path.abspath(__file__)) + "/data/contacts/phones/"
     #
-    if arguments.message_file is not None:
+    if arguments.message_file:
         message_file_path = getattr(arguments, "message_file")
-    if arguments.phones_file is not None:
+    if arguments.phones_file:
         phone_files_path = getattr(arguments, "phones_file")
-    if arguments.target is not None:
+    if arguments.target:
         target = getattr(arguments, "target")
     #
     if "whatsapp" in target and os.environ.get("DISPLAY"):
@@ -213,24 +213,35 @@ def art(arguments):
     """
     encrypted_config, config_file_path, key_file_path = get_config_arguments(arguments)
     artist = atac.Art(encrypted_config, config_file_path, key_file_path)
-    font_size = 22
+    font_size = 12
     message_text = None
     images_path = None
     gif_path = None
+    generate_gif = False
+    add_labels = False
+    glob_pattern = "*.png"
     #
-    if arguments.font_size is not None:
+    if arguments.font_size:
         font_size = int(getattr(arguments, "font_size"))
-    if arguments.message_text is not None:
+    if arguments.message_text:
         message_text = getattr(arguments, "message_text")
-    if arguments.images_path is not None:
+    #
+    if arguments.images_path:
         images_path = getattr(arguments, "images_path")
-    if arguments.gif_path is not None:
+    if arguments.glob_pattern:
+        glob_pattern = getattr(arguments, "glob_pattern")
+    if arguments.gif_path:
         gif_path = getattr(arguments, "gif_path")
+    if arguments.add_labels_to_images:
+        add_labels_to_images = getattr(arguments, "add_labels_to_images")
     #
-    if images_path:
-        artist.generate_gifs_from_all_dirs(images_path, "*.png")
+    if add_labels_to_images and images_path:
+        artist.add_labels_to_images_in_dir(images_path, glob_pattern, font_size)
     #
-    if gif_path and message_text:
+    if generate_gif and images_path:
+        artist.generate_gifs_from_all_dirs(images_path, glob_pattern)
+    #
+    if message_text and gif_path:
         artist.add_centered_text_to_gif(gif_path, message_text, font_size)
 
 
@@ -475,9 +486,12 @@ if __name__ == "__main__":
     parser_art.add_argument("-e", dest="encrypted_config", action="store_true")
     parser_art.add_argument("-k", dest="key_file", type=str, help="use key file path")
     parser_art.add_argument("-f", dest="font_size", type=int, help="font_size")
+    parser_art.add_argument("-i", dest="images_path", type=str, help="path to images directory")
+    parser_art.add_argument("-l", dest="add_labels_to_images", action="store_true")
     parser_art.add_argument("-m", dest="message_text", type=str, help="text message")
     parser_art.add_argument("-g", dest="gif_path", type=str, help="path to gif file")
-    parser_art.add_argument("-p", dest="images_path", type=str, help="path to images directory")
+    parser_art.add_argument("-p", dest="glob_pattern", type=str, help="glob_pattern")
+    parser_art.add_argument("-z", dest="generate_gif", action="store_true")
     parser_art.add_argument("-t", dest="art_type", choices=["sudoku", "invaders"])
     parser_art.add_argument("-v", dest="verbose")
     parser_art.set_defaults(func=art)

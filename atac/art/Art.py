@@ -3,8 +3,10 @@ import io
 import json
 import os
 import qrcode
+from pathlib import Path
 
 import random
+import regex
 
 # from lib.util.io import loadJSON, pathExists
 #
@@ -109,6 +111,14 @@ class Art(Config):
             gif_filename = "{}.{}".format(os.path.basename(subfolder_path), "gif")
             self.make_gif_from_dir(subfolder_path, gif_filename, glob_pattern)
 
+    def add_labels_to_images_from_all_dirs(self, images_directory, glob_pattern, font_size):
+        print(images_directory)
+        subfolders = [f.path for f in os.scandir(os.path.abspath(images_directory)) if f.is_dir()]
+        print(json.dumps(subfolders, indent=4))
+        for subfolder_path in subfolders:
+            print("{} - {}: ".format(subfolder_path, os.path.basename(subfolder_path)))
+            self.add_labels_to_images_in_dir(subfolder_path, glob_pattern, font_size)
+
     def add_centered_text_to_gif(self, gif_file_path, msg, font_size):
         #
         im = Image.open(gif_file_path)
@@ -189,7 +199,27 @@ class Art(Config):
         result.paste(pil_img, (left, top))
         return result
 
-    def create_qr_code(url):
+    def add_labels_to_images_in_dir(self, frame_folder, glob_pattern, font_size):
+        """ """
+        glob_arg = "{}/{}".format(os.path.abspath(frame_folder), glob_pattern)
+        print("glob pattern: " + glob_arg)
+        image_paths = [os.path.join(frame_folder, f) for f in sorted(glob.glob(glob_arg))]
+        print(json.dumps(image_paths, indent=4))
+        raw_frames = [{"path": path, "image": Image.open(path).convert("RGB")} for path in image_paths]
+        #
+        for f in raw_frames:
+            #
+            img = self.add_margin(f["image"], 0, 0, 22, 0, (255, 255, 255))
+            #
+            draw = ImageDraw.Draw(img)
+            font = ImageFont.truetype("fonts/LiberationMono-Bold.ttf", font_size)
+            w, h = img.size
+            msg = regex.sub(r"\d_", "", Path(f["path"]).stem).replace("_", " ").title()
+            text_w, text_h = draw.textsize(msg, font)
+            draw.text(((w - text_w) // 2, h - text_h - 5), msg, fill="black", font=font)
+            img.save(f["path"])
+
+    def create_qr_code(self, url):
         """Generate QR Code
 
         Parameters
