@@ -1,15 +1,12 @@
 <p align="center" width="100%"><img src="https://raw.githubusercontent.com/strikles/atac-data/main/messages/assets/img/jesus/jesus_king.png"></p>
 
 
-I fled Portugal more than once to avoid extrajudicial sentences of the Colegio Militar CM-93 (aka Pedo-93) alumni group who gave the school a reputation of being a **"pedo school"** linked to **Pedro Miguel de Brito Esteves Grilo @PSP**, **Joao Filipe Saraiva Pinheiro** and **Eduardo Marcal Grilo** (former portuguese minister of education and former director of FCG) by hiding my case of child abuse in 1993 (after so many other cases), followed by the systematic abuse of my parents after I left in 1996 (including intercourse sabotage to silence us and coerce psychiatric care) with a blue-whale style game being forced upon us via abuse of bio-photonics, attempting to portrait me as a violent lowlife, a drug addict and surprisingly even a drug dealer, inducing synthetic states of psychosis in the presence of my parents and women in the middle of the night to use them as targets of directed violence as a repeated stochastic gamble, to come to the Netherlands and have my previous employer, the **infamous dutch coward Jasper Kums**, becoming criminally associated with these individuals and those recruited by them, participating in extrajudicial cyber-torture proceedings exacted via abuse of bio-photonics, as **workplace revenge** to break my teeth, pass me as a work incompetent schizophrenic, direct violence to my parents, sabotage my wedding and turn me homeless in a daily ritual that lasts since 2016 as a interactive spectacle to coerce choice between:
+I fled Portugal more than once to avoid extrajudicial sentences of the Colegio Militar CM-93 (aka Pedo-93) alumni group who gave the school a reputation of being a **"pedo school"** linked to **Pedro Miguel de Brito Esteves Grilo @PSP**, **Joao Filipe Saraiva Pinheiro** and **Eduardo Marcal Grilo** (former portuguese minister of education and former director of FCG) by hiding my case of child abuse in 1993 (after so many other cases), followed by the systematic abuse of my parents after I left in 1996 (including intercourse sabotage to silence us and coerce psychiatric care) with a blue-whale style game being forced upon us that lasts to this day via abuse of bio-photonics, attempting to portrait me as a violent lowlife by inducing synthetic states of psychosis in the presence of my parents and women in the middle of the night to use them as targets of directed violence as a repeated stochastic gamble, to come to the Netherlands and have my previous employer, the **infamous dutch coward Jasper Kums**, becoming criminally associated with these individuals and those recruited by them, participating in extrajudicial cyber-torture proceedings exacted via abuse of bio-photonics, as **workplace revenge** to break my teeth, pass me as a work incompetent schizophrenic, direct violence to my parents, sabotage my wedding and turn me homeless in a daily ritual that lasts since 2016 as a interactive spectacle to coerce choice between:
 
 
 1. Being forced to leave the Netherlands by systematically being incapacitated to work, so I am unable to repay the pile of debt forced upon me over the course of 6 years of being incapacitated to work, to at the very end sabotage a simple project all day exacting vibrotactile torture to simulate Van Gogh syndrome and articulating my tongue to make sure I can't earn any money, ging Portuguese immigrants a bad reputation as being untrustworthy and Portuguese Government a bad reputation, not only in the Netherlands, but worldwide.
 
 2. Being forced into assisted living psychiatric care and forced pharmaco-"therapy" against my will in violation of my human rights, combined with articulating my tongue whilst forcing me to hear the words "psychiatrist", "psychiatry" and "medication" over the course of months to guarantee antagonism and rejection which can be used as a justification for the synthetic states of psychosis systematically induced by the group in the physical vicinity of medical personnel.
-
-
-<p align="center" width="100%"><img src="https://raw.githubusercontent.com/strikles/atac-data/main/messages/assets/img/politicians/2_eduardo_marcal_grilo.png"><img src="https://raw.githubusercontent.com/strikles/atac-data/main/messages/assets/img/alumni_police/3_pedro_grilo.png"></p>
 
 
 The extrajudicial cyber-torture proceedings spectacle of sabotaging work, trying to make me lose my home, turn me homeless whilst simulating **Van Gogh syndrome** and having those recruited to exact extrajudicial sentences, insinuating themselves as masters of the degradation forced upon my social and family relations and my love life, using women as targets of directed violence by inducing synthetic states of psychosis in their physical vicinity to sabotage intercourse along with our wedding plans **whilst demanding tears** as an attempt to misdirect attention from child abuse and the blue-whale style suicide game forced upon us.
@@ -19,9 +16,6 @@ The extrajudicial cyber-torture proceedings spectacle of sabotaging work, trying
 
 
 **The fascist creeps engage in rituals of making people defecate themselves in the middle of the street on a regular basis. They wake me up by exacting vibrotactile cybertorture to simulate Van Gogh syndrome alternating between head and genitalia daily since I'm woken up in the middle of the night, in a tantrum of forcing me to feel cyber-sodomized and having my tongue articulated gambling my return to Portugal where I would endure an even harsher extrajudicial punishment with violence being directed to my parents to gamble: incarceration, living under assisted care in a psychiatric asylum or committing acts of self-harm.**
-
-
-<p align="center" width="100%"><img src="https://raw.githubusercontent.com/strikles/atac-data/main/messages/assets/img/colegio.png"></p>
 
 
 Both my **mother** and my **father** worked for **3 decades** as judicial clerks in various Portuguese courts of law, working often until midnight, to be used at the end of their life, as targets against which to direct violence by individuals who aligned their interest, some covering up for their crimes of child abuse, others as workplace revenge, others under the pretences of making the school look bad or as revenge for refusing to leave school in a game of **transfer of guilt, transfer of punishment, and transfer of responsibility.**
@@ -45,7 +39,7 @@ As a extrajudicial sentence for non-sense conversations so they can show me "wha
 <p align="center" width="100%"><img src="https://raw.githubusercontent.com/strikles/atac-data/main/messages/assets/img/alumni/oscar_ferreira.png"></p>
 
 
-This group of recruited individuals sits in a home all day articulating my tongue thinking they can force acts of self-harm, gambling self-mutilation of ears, head and genitalia whilst smoking cannabis:
+This group of recruited individuals sits in a home all day articulating my tongue thinking they can force acts of self-harm, gambling self-mutilation of ears, head and genitalia of others whilst smoking cannabis:
 
 
 <p align="center" width="100%"><img class="person" src="https://raw.githubusercontent.com/strikles/atac-data/main/messages/assets/img/jardim_adamastor/2_luis_muskiado.png"><img class="person" src="https://raw.githubusercontent.com/strikles/atac-data/main/messages/assets/img/jardim_adamastor/2_tania_borboleta.png"></p>
@@ -94,13 +88,11 @@ The individuals recruited by the CM-93 group to exact the extrajudicial trials a
 
 <p align="center" width="100%"><img src="https://raw.githubusercontent.com/strikles/atac-data/main/messages/assets/img/tapada_do_mocho/tapada_do_mocho.gif"></p>
 
-<p align="center" width="100%"><img src="https://raw.githubusercontent.com/strikles/atac-data/main/messages/assets/img/tiago_jorge_roque.png"></p>
-
 * those linked to **Ivo Francisco**, **Tiago Santos Sousa** and **Pedro Caetano**
 
 <p align="center" width="100%"><img src="https://raw.githubusercontent.com/strikles/atac-data/main/messages/assets/img/jardim_adamastor/jardim_adamastor.gif"></p>
 
-* those linked to **Ricardo Rebordão de Brito**, **Pedro Nuno da Silva Rocha** and **Eduardo Metzner**
+* those linked to **Tiago Goncalves - AEGIS insurance**, **Ricardo Rebordão de Brito**, **Pedro Nuno da Silva Rocha** and **Eduardo Metzner**
 
 <p align="center" width="100%"><img src="https://raw.githubusercontent.com/strikles/atac-data/main/messages/assets/img/alumni/alumni.gif"></p>
 
@@ -365,6 +357,7 @@ Some details worthy of your attention:
 * Joao Filipe Saraiva Pinheiro
 * Ricardo Rebordão de Brito
 * Rui Goncalo Pires Pintado
+* Tiago Goncalves
 
 
 ### 1988:
