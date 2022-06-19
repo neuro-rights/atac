@@ -92,7 +92,7 @@ The individuals recruited by the CM-93 group to exact the extrajudicial trials a
 
 <p align="center" width="100%"><img src="https://raw.githubusercontent.com/strikles/atac-data/main/messages/assets/img/jardim_adamastor/jardim_adamastor.gif"></p>
 
-* those linked to **Tiago Goncalves - AEGIS insurance**, **Ricardo Rebordão de Brito**, **Pedro Nuno da Silva Rocha** and **Eduardo Metzner**
+* those linked to **Tiago Goncalves - AEGIS insurance**, **Ricardo Rebordão de Brito**, **Alberto Rebordão de Brito**, **Pedro Nuno da Silva Rocha** and **Eduardo Metzner**
 
 <p align="center" width="100%"><img src="https://raw.githubusercontent.com/strikles/atac-data/main/messages/assets/img/alumni/alumni.gif"></p>
 

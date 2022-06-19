@@ -199,6 +199,16 @@ class Art(Config):
         result.paste(pil_img, (left, top))
         return result
 
+    def add_label(self, pil_img, color):
+        w, h = pil_img.size
+        # create image with size (100,100) and black background
+        label_img = Image.new("RGBA", (w, 22), color)
+        # put text on image
+        label_draw = ImageDraw.Draw(label_img)
+        # put button on source image in position (0, 0)
+        pil_img.paste(label_img, (0, h - 22))
+        return pil_img
+
     def add_labels_to_images_in_dir(self, frame_folder, glob_pattern, font_size):
         """ """
         glob_arg = "{}/{}".format(os.path.abspath(frame_folder), glob_pattern)
@@ -209,7 +219,7 @@ class Art(Config):
         #
         for f in raw_frames:
             #
-            img = self.add_margin(f["image"], 0, 0, 22, 0, (255, 255, 255))
+            img = self.add_label(f["image"], (255, 255, 255))
             #
             draw = ImageDraw.Draw(img)
             font = ImageFont.truetype("fonts/LiberationMono-Bold.ttf", font_size)
