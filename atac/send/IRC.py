@@ -379,7 +379,7 @@ class SendIRC(Send):
             print(network)
             # create factory protocol and application
             network_name = network["server"].split(".")[1]
-            factory = LogBotFactory(network, message, "logs/{}.log".format(network_name))
+            factory = LogBotFactory(network, message, "log/{}.log".format(network_name))
             # connect factory to this host and port
             # reactor.connectSSL(network["server"], network["port"], factory, ssl.ClientContextFactory())
             reactor.connectTCP(network["server"], 6667, factory)
