@@ -79,8 +79,8 @@ class ListBot(irc.IRCClient):
         self.channels = []
         self.users = []
         self.irc_network = irc_network
-        self.list_finished = False
-        self.names_finished = False
+        self._namescallback = {}
+        self._listcallback = {}
 
     def action(self, user, channel, msg):
         """
@@ -118,13 +118,7 @@ class ListBot(irc.IRCClient):
         Called when bot has succesfully signed on to server.
         """
         #
-        print(">>> sending /NAMES")
-        self.sendLine("names")
-        #
-        """
-        print(">>> sending /LIST")
-        self.sendLine("list")
-        """
+        self.names
 
     def joined(self, channel):
         """
@@ -137,6 +131,23 @@ class ListBot(irc.IRCClient):
         This will get called when the bot joins the channel.
         """
         self.logger.log("[Left {}]".format(channel))
+
+    def names(self, channel):
+        """ """
+        d = defer.Deferred()
+        if channel not in self._namescallback:
+            self._namescallback[channel] = ([], [])
+
+        self._namescallback[channel][0].append(d)
+        self.sendLine("NAMES {}".format(channel))
+        return d
+
+    def channels(self):
+        """ """
+        d = defer.Deferred()
+        self._listcallback[0].append(d)
+        self.sendLine("LIST")
+        return d
 
     def lineReceived(self, line):
         """ """
@@ -203,14 +214,39 @@ class ListBot(irc.IRCClient):
 
     def irc_RPL_NAMREPLY(self, prefix, params):
         """ """
-        print(">>> irc_RPL_NAMREPLY", prefix, params)
         channel = params[2].lower()
         nicklist = params[3].split(" ")
-        self.users += nicklist
+        #
+        if channel not in self._namescallback:
+            return
+        #
+        n = self._namescallback[channel][1]
+        n += nicklist
 
-    def irc_RPL_NAMESEND(self, prefix, params):
+    def irc_RPL_ENDOFNAMES(self, prefix, params):
+        """ """
         print(">>> irc_RPL_NAMESEND", prefix, params)
-        self.users = [u for u in set(self.users) if u not in ["NickServ", "FloodServ"]]
+        channel = params[1].lower()
+        #
+        if channel not in self._namescallback:
+            return
+        #
+        callbacks, namelist = self._namescallback[channel]
+        for cb in callbacks:
+            cb.callback(namelist)
+        #
+        del self._namescallback[channel]
+
+    """
+    def got_names(nicklist):
+        log.msg(nicklist)
+
+    self.names("#some channel").addCallback(got_names)
+    """
+
+    """
+    def irc_RPL_NAMESEND(self, prefix, params):
+        self.users = [u for u in set(self.users) if u not in ["NickServ", "FloodServ", "*"]]
         for user in self.users:
             print(user)
             for message in self.messages:
@@ -218,6 +254,7 @@ class ListBot(irc.IRCClient):
                 time.sleep(1)
             print(">>> {} - {}".format(user, self.message))
             time.sleep(1)
+    """
 
 
 class LogBotFactory(protocol.ClientFactory):

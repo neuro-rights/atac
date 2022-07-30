@@ -17,7 +17,8 @@ import threading
 
 
 class Scrape(Config):
-    """A class used to represent a scraper object
+    """
+    A class used to represent a scraper object
 
     Attributes
     ----------

@@ -21,8 +21,6 @@ from tqdm import tqdm
 import validators
 
 
-from envelope import Envelope
-
 # Logging
 ## For results: open << debug.log >>
 LOGGER = logging.getLogger("Riseup_Log")
@@ -352,6 +350,7 @@ class SendEmail(Send):
         time.sleep(5)
         return status
 
+    """
     def send_envelope(
         self,
         mailing_list,
@@ -402,7 +401,7 @@ class SendEmail(Send):
             status = 1
         #
         return status
-
+    """
 
 class Riseup:
 
