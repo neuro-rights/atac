@@ -17,7 +17,7 @@ Faker
 fake-useragent
 flake8
 ipfshttpclient
-irc
+git+https://github.com/x64x6a/ircbot.git
 language_tool_python
 latex2mathml
 lxml
@@ -26,7 +26,9 @@ markovify
 git+https://github.com/shawnanastasio/python-matrix-bot-api.git@master
 mistune==2.0.2
 nltk
+nmap
 numpy
+pyOpenSSL
 pandas
 phonenumbers
 Pillow
@@ -40,7 +42,8 @@ pystache
 pytest
 python-dotenv
 python-gnupg
-python-magic-bin; platform_system == 'Windows'
+python-magic
+#python-magic-bin; platform_system == 'Windows'
 pywhatkit
 pywsd==1.0.4
 PyYAML
@@ -50,6 +53,7 @@ regex
 requests
 samila
 scipy
+service_identity
 shadow-useragent
 spacy
 stdiomask
@@ -60,7 +64,10 @@ tldextract
 torrequest
 tqdm
 translators
+treq
+txtorcon
 tsp_solver2
+twisted
 urllib3
 utils
 validators

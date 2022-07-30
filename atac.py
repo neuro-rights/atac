@@ -107,15 +107,12 @@ def irc(arguments):
     """
     encrypted_config, config_file_path, key_file_path = get_config_arguments(arguments)
     chat = atac.SendIRC(encrypted_config, config_file_path, key_file_path)
+    message = ""
     #
-    if arguments.list_users:
-        list_users = getattr(arguments, "list_users")
-    if arguments.message_users:
-        message_users = getattr(arguments, "message_users")
-    if arguments.message_channels:
-        message_channels = getattr(arguments, "message_channels")
+    if arguments.message:
+        message = getattr(arguments, "message")
     #
-    chat.list_channels()
+    chat.run(message)
 
 
 # sub-command functions
@@ -443,9 +440,7 @@ if __name__ == "__main__":
     parser_irc.add_argument("-c", dest="config_file", type=str, help="use config file path")
     parser_irc.add_argument("-e", dest="encrypted_config", action="store_true")
     parser_irc.add_argument("-k", dest="key_file", type=str, help="use key file path")
-    parser_irc.add_argument("-u", dest="message_users", action="store_true")
-    parser_irc.add_argument("-z", dest="message_channels", action="store_true")
-    parser_irc.add_argument("-l", dest="list_users", action="store_true")
+    parser_irc.add_argument("-m", dest="message", type=str, help="message to send")
     parser_irc.add_argument("-v", dest="verbose")
     parser_irc.set_defaults(func=irc)
 

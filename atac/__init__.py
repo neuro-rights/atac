@@ -31,18 +31,8 @@ from .scrape.Scrape import Scrape
 
 #
 from .send.Email import SendEmail
-from .send.Chat import SendChat
 from .send.IRC import SendIRC
+from .send.Chat import SendChat
 from .send.Social import SendSocial
 
-__all__ = [
-    "Config",
-    "Art",
-    "Compose",
-    "Clean",
-    "Scrape",
-    "SendChat",
-    "SendEmail",
-    "SendIRC",
-    "SendSocial"
-]
+__all__ = ["Config", "Art", "Compose", "Clean", "Scrape", "SendChat", "SendEmail", "SendIRC", "SendSocial"]

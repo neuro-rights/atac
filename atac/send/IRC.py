@@ -1,20 +1,287 @@
+# Copyright (c) Twisted Matrix Laboratories.
+# See LICENSE for details.
+
+
+"""
+An example IRC log bot - logs a channel's events to a file.
+
+If someone says the bot's name in the channel followed by a ':',
+e.g.
+
+  <foo> logbot: hello!
+
+the bot will reply:
+
+  <logbot> foo: I am a log bot
+
+Run this script with two arguments, the channel name the bot should
+connect to, and file to log to, e.g.:
+
+  $ python ircLogBot.py test test.log
+
+will log channel #test to the file 'test.log'.
+"""
+# system imports
+import magic
+import random
+import sys
+import time
+import treq
+import txtorcon
+import unicodedata
+
+# twisted imports
+from twisted.words.protocols import irc
+from twisted.internet import reactor, protocol, ssl
+from twisted.python import log
+from twisted.internet.task import react
+from twisted.internet.defer import inlineCallbacks, ensureDeferred
+from twisted.internet.endpoints import UNIXClientEndpoint
+
 from .Send import Send
 
-import json
-import sys
-import socket
-import time
+
+class MessageLogger:
+    """
+    An independent logger class (because separation of application
+    and protocol logic is a good thing).
+    """
+
+    def __init__(self, file):
+        """ """
+        self.file = file
+
+    def log(self, message):
+        """
+        Write a message to the file.
+        """
+        timestamp = time.strftime("[%H:%M:%S]", time.localtime(time.time()))
+        print(f"{timestamp} {message}\n")
+        self.file.write(f"{message}\n")
+        self.file.flush()
+
+    def close(self):
+        self.file.close()
+
+
+class ListBot(irc.IRCClient):
+    """ """
+
+    nickname = ""  # nickname
+    password = ""  # server pass
+
+    def __init__(self, irc_network, message, log_filename):
+        """ """
+        self.nickname = irc_network["nickname"]  # nickname
+        self.password = irc_network["password"]  # server pass
+        self.messages = message.split(".")
+        self.filename = log_filename
+        self.channels = []
+        self.users = []
+        self.irc_network = irc_network
+        self.list_finished = False
+        self.names_finished = False
+
+    def action(self, user, channel, msg):
+        """
+        This will get called when the bot sees someone do an action.
+        """
+        user = user.split("!", 1)[0]
+        self.logger.log("* {} {}".format(user, msg))
+
+    # For fun, override the method that determines how a nickname is changed on
+    # collisions. The default method appends an underscore.
+    def alterCollidedNick(self, nickname):
+        """
+        Generate an altered version of a nickname that caused a collision in an
+        effort to create an unused related name for subsequent registration.
+        """
+        return nickname + "^"
+
+    def connectionMade(self):
+        """ """
+        irc.IRCClient.connectionMade(self)
+        print("connectionMade")
+        self.logger = MessageLogger(open(self.filename, "w"))
+        print("{} [connected to {}]".format(time.asctime(time.localtime(time.time())), self.irc_network["server"]))
+
+    def connectionLost(self, reason):
+        """ """
+        irc.IRCClient.connectionLost(self, reason)
+        print(reason)
+        print("{} [disconnected from {}]".format(time.asctime(time.localtime(time.time())), self.irc_network["server"]))
+        self.logger.close()
+
+    # callbacks for events
+    def signedOn(self):
+        """
+        Called when bot has succesfully signed on to server.
+        """
+        #
+        print(">>> sending /NAMES")
+        self.sendLine("names")
+        #
+        """
+        print(">>> sending /LIST")
+        self.sendLine("list")
+        """
+
+    def joined(self, channel):
+        """
+        This will get called when the bot joins the channel.
+        """
+        self.logger.log("[Joined {}]".format(channel))
+
+    def left(self, channel):
+        """
+        This will get called when the bot joins the channel.
+        """
+        self.logger.log("[Left {}]".format(channel))
+
+    def lineReceived(self, line):
+        """ """
+        if bytes != str and isinstance(line, bytes):
+            # decode bytes from transport
+            m = magic.Magic(mime_encoding=True)
+            encoding = m.from_buffer(line)
+            print(">>> encoding ", encoding)
+            if encoding in ["binary", "unknown-8bit"]:
+                return
+            line = line.decode(encoding)
+        #
+        line = irc.lowDequote(line)
+        try:
+            prefix, command, params = irc.parsemsg(line)
+            if command in irc.numeric_to_symbolic:
+                command = irc.numeric_to_symbolic[command]
+            self.handleCommand(command, prefix, params)
+        except irc.IRCBadMessage:
+            self.badMessage(line, *sys.exc_info())
+
+    # irc callbacks
+    def irc_unknown(self, prefix, command, params):
+        """
+        Called by L{handleCommand} on a command that doesn't have a defined
+        handler. Subclasses should override this method.
+        """
+        print(">>> irc_unknown", command, prefix, params)
+
+    def irc_NICK(self, prefix, params):
+        """
+        Called when an IRC user changes their nickname.
+        """
+        old_nick = prefix.split("!")[0]
+        new_nick = params[0]
+        self.logger.log("%s is now known as %s" % (old_nick, new_nick))
+
+    def irc_RPL_LISTSTART(self, prefix, params):
+        """ """
+        print(">>> irc_RPL_LISTSTART", prefix, params)
+
+    def irc_RPL_LIST(self, prefix, params):
+        """ """
+        print(">>> irc_RPL_LIST", prefix, params)
+        self.logger.log(params[1])
+        self.channels.append(params[1])
+
+    def irc_RPL_LISTEND(self, prefix, params):
+        print("irc_RPL_LISTEND", prefix, params)
+        # self.list_finished = True
+        for channel in self.channels:
+            print(channel)
+            super(irc.IRCClient, self).join(channel)
+            for message in self.messages:
+                super(irc.IRCClient, self).msg(channel, message)
+                print(">>> {} - {}".format(channel, message))
+                time.sleep(1)
+            super(irc.IRCClient, self).leave(channel)
+            time.sleep(1)
+
+    def irc_RPL_NAMESSTART(self, prefix, params):
+        """ """
+        print(">>> irc_RPL_NAMESSTART", prefix, params)
+
+    def irc_RPL_NAMREPLY(self, prefix, params):
+        """ """
+        print(">>> irc_RPL_NAMREPLY", prefix, params)
+        channel = params[2].lower()
+        nicklist = params[3].split(" ")
+        self.users += nicklist
+
+    def irc_RPL_NAMESEND(self, prefix, params):
+        print(">>> irc_RPL_NAMESEND", prefix, params)
+        self.users = [u for u in set(self.users) if u not in ["NickServ", "FloodServ"]]
+        for user in self.users:
+            print(user)
+            for message in self.messages:
+                super(irc.IRCClient, self).msg(user, self.message)
+                time.sleep(1)
+            print(">>> {} - {}".format(user, self.message))
+            time.sleep(1)
+
+
+class LogBotFactory(protocol.ClientFactory):
+    """
+    A factory for LogBots.
+    A new protocol instance will be created each time we connect to the server.
+    """
+
+    def __init__(self, irc_network, message, log_filename):
+        """ """
+        self.irc_network = irc_network
+        self.message = message
+        self.filename = log_filename
+
+    def buildProtocol(self, addr):
+        """ """
+        p = ListBot(self.irc_network, self.message, self.filename)
+        p.factory = self
+        return p
+
+    def clientConnectionLost(self, connector, reason):
+        """
+        If we get disconnected, reconnect to server.
+        """
+        connector.connect()
+
+    def clientConnectionFailed(self, connector, reason):
+        print(
+            "{}[connection to {} failed] {}".format(
+                time.asctime(time.localtime(time.time())), self.irc_network["server"], reason
+            )
+        )
+        if reactor.running:
+            reactor.stop()
 
 
 class SendIRC(Send):
+    """
+    A class used to represent a Configuration object
 
-    RPL_LIST = "322"
-    RPL_LISTEND = "323"
-    RPL_NAMREPLY = "353"
-    RPL_ENDOFNAMES = "366"
+    Attributes
+    ----------
+    key : str
+        a encryption key
+    data : dict
+        configuration data
+    encrypted_config : bool
+        use an encrypted configuration file
+    config_file_path : str
+        path to the configuration file
+    key_file_path : str
+        path to encryption key file
+    gpg : gnupg.GPG
+        python-gnupg gnupg.GPG
+
+    Methods
+    -------
+    generate_key()
+        Generates a new encryption key from a password + salt
+    """
 
     def __init__(self, encrypted_config=True, config_file_path="auth.json", key_file_path=None):
-        """Class init
+        """
+        Class init
 
         Parameters
         ----------
@@ -26,111 +293,58 @@ class SendIRC(Send):
             path to encryption key file
         """
         super().__init__(encrypted_config, config_file_path, key_file_path)
-        self.irc = self.data["irc"]["network"]
-        self.user = self.data["irc"]["user"]
-        self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        self.irc = self.data["irc"]
+        # self.active_irc_network = self.data["irc"]["active_network"]
+        # self.irc_network = self.data["irc"]["networks"][self.active_irc_network]
 
-    def connect(self):
-        #
-        print("Connecting to {host}:{port}...".format(**self.irc))
-        try:
-            self.socket.connect((self.irc["host"], int(self.irc["port"])))
-        except socket.error:
-            print("Error connecting to IRC server {host}:{port}".format(**self.irc))
-            sys.exit(1)
+    async def tor_run(reactor):
+        """ """
+        tor = await txtorcon.connect(reactor, UNIXClientEndpoint(reactor, "/var/run/tor/control"))
 
-        print("USER {username} {hostname} {servername} :{realname}..".format(**self.user))
-        self.socket.send(bytes("USER {username} {hostname} {servername} :{realname}\r\n".format(**self.user).encode()))
-        #
-        print("NICK {nick}...".format(**self.user))
-        self.socket.send(bytes("NICK {nick}\r\n".format(**self.user).encode()))
-        #
-        print("PRIVMSG NICKSERV IDENTIFY {botnick} {botpass}..".format(**self.irc))
-        self.socket.send("PRIVMSG NICKSERV :IDENTIFY {botnick} {botpass}\r\n".format(**self.irc).encode())
-        #
-        print("JOIN {channel}...".format(**self.irc))
-        self.socket.send(bytes("JOIN {channel}\r\n".format(**self.irc).encode()))
+        print("Connected to Tor version {}".format(tor.version))
 
-    """
-    def get_response(self):
-        time.sleep(1)
-        # Get the response
-        resp = self.irc.recv(2040).decode("UTF-8")
-        if resp.find('PING') != -1:
-            self.socket.send(bytes('PONG ' + resp.split().decode("UTF-8")[1] + '\r\n', "UTF-8"))
-            return resp
-    """
+        url = "https://www.torproject.org:443"
+        print("Downloading {}".format(repr(url)))
+        resp = await treq.get(url, agent=tor.web_agent())
 
-    def list_channels(self):
-        #
-        self.connect()
-        #
-        read_buffer = ""
-        channels = []
-        pinged = False
-        while True:
-            #
-            response = self.socket.recv(2048).decode(errors="replace")
-            read_buffer += response
-            lines = read_buffer.split("\r\n")
-            read_buffer = lines.pop()
-            #
-            for line in lines:
-                #
-                if not line:
-                    continue
-                #
-                response = line.rstrip().split(" ", 3)
-                response_code = response[1]
-                print("response_code {} ...\r\n".format(response_code))
-                #
-                if line.find("PING") != -1:
-                    ping_response = line.split()[1]
-                    print("PONG {}".format(ping_response))
-                    self.socket.send(bytes("PONG {}\r\n".format(ping_response).encode()))
-                    #
-                    print("PRIVMSG NICKSERV IDENTIFY {botnick} {botpass}..".format(**self.irc))
-                    self.socket.send("PRIVMSG NICKSERV :IDENTIFY {botnick} {botpass}\r\n".format(**self.irc).encode())
-                    print("LIST...")
-                    self.socket.send(bytes("LIST\r\n".encode()))
-                    break
-                #
-                if response_code == self.RPL_LIST:
-                    print("GOT: {}".format(line))
-                    channels_list = response[3].split(":")[1]
-                    cl = channels_list.split(" ")
-                    print("ch on server {}...".format(json.dumps(cl, indent=4)))
-                    """
-                    if cl[0] != "[+nt]" and len(cl) > 1:
-                        channels += cl[1]
-                    """
+        print("   {} bytes".format(resp.length))
+        data = await resp.text()
+        print(
+            "Got {} bytes:\n{}\n[...]{}".format(
+                len(data),
+                data[:120],
+                data[-120:],
+            )
+        )
 
-    def list_names(self):
+        print("Creating a circuit")
+        state = await tor.create_state()
+        circ = await state.build_circuit()
+        await circ.when_built()
+        print("  path: {}".format(" -> ".join([r.ip for r in circ.path])))
+
+        print("Downloading meejah's public key via above circuit...")
+        config = await tor.get_config()
+        resp = await treq.get(
+            "https://meejah.ca/meejah.asc",
+            agent=circ.web_agent(reactor, config.socks_endpoint(reactor)),
+        )
+        data = await resp.text()
+        print(data)
+
+    def run(self, message):
+        # initialize logging
+        log.startLogging(sys.stdout)
+        print(message)
         #
-        self.connect()
-        print("NAMES {channel}...".format(**self.irc))
-        self.socket.send("NAMES {channel}\r\n".format(**self.irc).encode())
-        read_buffer = ""
-        names = []
-        while True:
-            #
-            response = self.socket.recv(1024).decode()
-            read_buffer += response
-            lines = read_buffer.split("\r\n")
-            #
-            for line in lines:
-                #
-                if not line:
-                    continue
-                #
-                response = line.rstrip().split(" ", 3)
-                response_code = response[1]
-                if response_code == self.RPL_NAMREPLY:
-                    names_list = response[3].split(":")[1]
-                    names += names_list.split(" ")
-                #
-                if response_code == self.RPL_ENDOFNAMES:
-                    print("\r\nUsers in {channel}:".format(**self.irc))
-                    for name in names:
-                        print(name)
-                    names = []
+        irc_networks = [net for net in self.irc["networks"] if net["active"]]
+        for network in irc_networks:
+            print(network)
+            # create factory protocol and application
+            network_name = network["server"].split(".")[1]
+            factory = LogBotFactory(network, message, "logs/{}.log".format(network_name))
+            # connect factory to this host and port
+            # reactor.connectSSL(network["server"], network["port"], factory, ssl.ClientContextFactory())
+            reactor.connectTCP(network["server"], 6667, factory)
+        # run bot
+        reactor.run()

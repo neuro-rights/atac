@@ -8,6 +8,8 @@ from pathlib import Path
 import random
 import regex
 
+from textwrap import wrap
+
 # from lib.util.io import loadJSON, pathExists
 #
 from PIL import Image
@@ -132,13 +134,11 @@ class Art(Config):
             wsize = int((float(frame.size[0]) * float(hpercent)))
             frame = frame.resize((wsize, baseheight), Image.ANTIALIAS)
             # convert
-            if frame.mode != "RGB":
-                frame.convert("RGB")
-            #
+            frame.convert("L")
             frames.append(frame)
         #
         frames[0].save(gif_file_path, save_all=True, append_images=frames[1:])
-        #
+        message_lines = msg.split(".")
         im = Image.open(gif_file_path)
         # A list of the frames to be outputted
         frames = []
@@ -147,11 +147,21 @@ class Art(Config):
             # draw
             W, H = (frame.size[0], frame.size[1])
             # Draw the text on the frame
-            draw = ImageDraw.Draw(frame)
+            draw_interface = ImageDraw.Draw(frame)
             font = ImageFont.truetype("fonts/LiberationMono-Bold.ttf", font_size)
-            w, h = draw.textsize(msg, font)
-            draw.text(((W - w) / 2, (H - h) / 2), msg, fill=211, font=font)
-            del draw
+            w, h = draw_interface.textsize(msg, font)
+            y = (H - h * len(message_lines)) / 2
+            # Draw each line of text
+            for i, line in enumerate(message_lines):
+                # Calculate the horizontally-centered position at which to draw this line
+                line_width = font.getmask(line).getbbox()[2]
+                x = (W - line_width) // 2
+                # Draw this line
+                draw_interface.multiline_text((x, y), line, font=font, fill=(255, 255, 255, 255))
+                # Move on to the height at which the next line should be drawn at
+                y += h
+            #
+            del draw_interface
             # However, 'frame' is still the animated image with many frames
             # It has simply been seeked to a later frame
             # For our list of frames, we only want the current frame
