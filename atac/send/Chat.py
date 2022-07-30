@@ -5,9 +5,11 @@ import random
 import sys
 import time
 
+"""
 from matrix_bot_api.matrix_bot_api import MatrixBotAPI
 from matrix_bot_api.mregex_handler import MRegexHandler
 from matrix_bot_api.mcommand_handler import MCommandHandler
+"""
 
 # import phonenumbers
 from phonenumbers import NumberParseException, phonenumberutil
@@ -35,9 +37,7 @@ class SendChat(Send):
     -------
     """
 
-    def __init__(
-        self, encrypted_config=True, config_file_path="auth.json", key_file_path=None
-    ):
+    def __init__(self, encrypted_config=True, config_file_path="auth.json", key_file_path=None):
         """Class init
 
         Parameters

@@ -1,6 +1,7 @@
 import math
 import numpy as np
-from pydbg import *
+
+# from pydbg import *
 import random
 import regex
 import string
@@ -145,9 +146,7 @@ def remove_accent_chars_regex(x: str):
 def remove_accent_chars_join(x: str):
     # answer by MiniQuark
     # https://stackoverflow.com/a/517974/7966259
-    return "".join(
-        [c for c in unicodedata.normalize("NFKD", x) if not unicodedata.combining(c)]
-    )
+    return "".join([c for c in unicodedata.normalize("NFKD", x) if not unicodedata.combining(c)])
 
 
 def fix_mixed_encoding(s):
@@ -173,6 +172,7 @@ def fix_mixed_encoding(s):
     return output
 
 
+"""
 def breakpoint_handler(dbg):
     print(dbg.dump_context())
     return DBG_CONTINUE
@@ -185,7 +185,7 @@ def inspect(f):
         return f(*args, **kwargs)
 
     return wrap
-
+"""
 
 # Defining a decorator
 def trace(f):

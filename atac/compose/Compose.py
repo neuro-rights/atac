@@ -19,7 +19,8 @@ from email.mime.nonmultipart import MIMENonMultipart
 from glob import glob
 import json
 import mistune
-import pystache
+
+# import pystache
 import os
 import regex
 import uuid

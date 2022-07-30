@@ -362,15 +362,6 @@ class SendEmail(Send):
         src=False,
         dest=False,
     ):
-        """Send email
-
-        Parameters
-        ----------
-        mailing_list : list
-            The emails list
-        message : MIMEMultipart
-            The email messsage to send
-        """
         status = 0
         auth, _ = self.get_config()
         html_content = Compose.md2html(message_content)
@@ -402,6 +393,7 @@ class SendEmail(Send):
         #
         return status
     """
+
 
 class Riseup:
 
