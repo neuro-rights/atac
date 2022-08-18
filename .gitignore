@@ -1,0 +1,10 @@
+__pycache__/
+env/
+venv/
+log/
+.hypothesis/
+.idea/
+*.json
+*.key
+*.log
+*.mdpp
