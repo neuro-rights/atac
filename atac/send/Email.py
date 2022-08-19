@@ -157,8 +157,11 @@ class SendEmail(Config):
 
             recipients_status = envelope.check(check_mx=True, check_smtp=True)
             print(recipients_status)
+            
+            """
             message_preview = envelope.preview()
             print(message_preview)
+            """
 
             envelope.send(send=False).send(send=True)
 

@@ -250,7 +250,7 @@ class Config(metaclass=ABCMeta):
         else:
             self.data = json.loads(config_file)
 
-        print(json.dumps(self.data, indent=4))
+        # print(json.dumps(self.data, indent=4))
             
 
     def dict_from_module(self, module):
