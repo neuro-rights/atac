@@ -707,7 +707,7 @@ class SendIRC(Config):
         if message:
             messages = message.split(". ")
         else:
-            messages = self.irc["messages"][-1]
+            messages = self.irc["messages"][1]
 
         print(messages)
 

@@ -161,9 +161,6 @@ class SendEmail(Config):
             print(message_preview)
 
             envelope.send(send=False).send(send=True)
-            print("Sleeping for {} seconds...".format(self.email["emailthrottleinterval"]))
-            print("To change the throttle value edit your json config file")
-            time.sleep(self.email["emailthrottleinterval"])
 
         except Exception as err:
             status = err
@@ -184,16 +181,19 @@ class SendEmail(Config):
         auth, _ = self.get_config()
         encrypted_emails = []
         message = get_file_content(message_file_path)
-
         print("sending email batches…")
+
         with tqdm(total=len(email_batches)) as progress:
             for email_batch in email_batches:
-                print(email_batch)
+                #print(email_batch)
                 send_status = self.send_email(email_batch, message, subject)
                 if send_status != 0:
                     print(colored("An error occurred: {}".format(send_status), "white", "on_red"))
 
                 progress.update(1)
+                print("Sleeping for {} seconds...".format(self.email["emailthrottleinterval"]))
+                print("To change the throttle value edit your json config file")
+                time.sleep(self.email["emailthrottleinterval"])
 
     def store_emails_in_buckets(self, lines):
         """
@@ -238,7 +238,7 @@ class SendEmail(Config):
                 0, len(recipient_emails), self.email["maxrecipients"]
             )
         ]
-        print(json.dumps(batch_emails, indent=4))
+        #print(json.dumps(batch_emails, indent=4))
         return batch_emails
 
     def send(self, email_files_path, message_file_path, subject):
