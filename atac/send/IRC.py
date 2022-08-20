@@ -20,14 +20,19 @@ from twisted.internet import (
     task,
     threads,
 )
-from twisted.python import log
 
 #
 from twisted.internet.defer import inlineCallbacks
 from twisted.internet.task import deferLater, react
 from twisted.internet.endpoints import UNIXClientEndpoint
 
+from twisted.python import log
+from twisted.python.threadpool import ThreadPool
+
+
 from ..config.Config import Config
+
+log.startLogging(sys.stdout)
 
 
 class ListBotIRCProtocol(irc.IRCClient):
@@ -42,7 +47,7 @@ class ListBotIRCProtocol(irc.IRCClient):
     --------
     """
 
-    def __init__(self, logger, description):
+    def __init__(self, description):
         """
         Description:
         ------------
@@ -57,19 +62,36 @@ class ListBotIRCProtocol(irc.IRCClient):
         self.nickname = description["network"]["nickname"]  # nickname
         self.password = description["network"]["password"]  # server pass
         self.messages = description["messages"]
-        self.logger = logger
         self._names_callback = {}
         self._list_callback = {}
+
+        reactor.addSystemEventTrigger('before', 'shutdown', self.cleanup)
+
         # validate message length
         for message in self.messages:
             if len(message) > 500:
-                print(
+                log.msg(
                     "{} message length {}, pls rephrase to avoid flood".format(
                         message,
                         len(message)
                     )
                 )
-                exit(1)
+                sys.exit(1)
+
+    def cleanup(self):
+        """
+        Description:
+        ------------
+
+        Parameters:
+        -----------
+
+        """
+
+        if reactor.running:
+            reactor.callFromThread(reactor.stop)
+
+        sys.exit(0)
 
     def _sendMessage(self, msg, target, nick=None):
         """
@@ -108,7 +130,7 @@ class ListBotIRCProtocol(irc.IRCClient):
         """
 
         user = user.split("!", 1)[0]
-        self.logger.log("* {} {}".format(user, msg))
+        log.msg("* {} {}".format(user, msg))
 
     def alterCollidedNick(self, nickname):
         """
@@ -165,9 +187,9 @@ class ListBotIRCProtocol(irc.IRCClient):
         """
 
         irc.IRCClient.connectionMade(self)
-        print("connectionMade")
+        log.msg("connectionMade")
         
-        print(
+        log.msg(
             colored(
                 "{} [connected to {}]".format(
                     time.asctime(time.localtime(time.time())),
@@ -188,8 +210,8 @@ class ListBotIRCProtocol(irc.IRCClient):
 
         """
 
-        print(reason)
-        print(
+        log.msg(reason)
+        log.msg(
             colored(
                 "{} [disconnected from {}]".format(
                     time.asctime(time.localtime(time.time())),
@@ -215,7 +237,7 @@ class ListBotIRCProtocol(irc.IRCClient):
             # decode bytes from transport
             m = magic.Magic(mime_encoding=True)
             encoding = m.from_buffer(line)
-            print(">>> encoding ", encoding)
+            log.msg(">>> encoding ", encoding)
             if encoding in ["binary", "unknown-8bit"]:
                 return
             line = line.decode(encoding)
@@ -240,7 +262,7 @@ class ListBotIRCProtocol(irc.IRCClient):
 
         """
 
-        self.logger.log("[Joined {}]".format(channel))
+        log.msg("[Joined {}]".format(channel))
 
     def left(self, channel):
         """
@@ -252,7 +274,7 @@ class ListBotIRCProtocol(irc.IRCClient):
 
         """
 
-        self.logger.log("[Left {}]".format(channel))
+        log.msg("[Left {}]".format(channel))
 
     def get_names(self, server):
         """ """
@@ -307,7 +329,7 @@ class ListBotIRCProtocol(irc.IRCClient):
 
             self.join(channel)
             for message in self.messages:
-                print(
+                log.msg(
                     colored(
                         ">>> channel:{}@{} {}/{} - {}: ".format(
                             channel,
@@ -324,7 +346,7 @@ class ListBotIRCProtocol(irc.IRCClient):
 
             self.leave(channel)
 
-        print(
+        log.msg(
             colored(
                 ">>> server: {} channels: {}".format(
                     self.hostname, channel_list
@@ -356,7 +378,7 @@ class ListBotIRCProtocol(irc.IRCClient):
             """
 
             for message in self.messages:
-                print(
+                log.msg(
                     colored(
                         ">>> message to user: {}@{} {}/{} - {}".format(
                             nick,
@@ -378,7 +400,7 @@ class ListBotIRCProtocol(irc.IRCClient):
             if not any(nick.startswith(ch) for ch in operator_tags)
             and not nick.endswith("Serv")
         ]
-        print(
+        log.msg(
             colored(
                 ">>> server: {} names: {}".format(self.hostname, nick_list),
                 "yellow",
@@ -452,7 +474,7 @@ class ListBotIRCProtocol(irc.IRCClient):
 
         """
 
-        print(
+        log.msg(
             colored(
                 ">>> irc_unknown {} - {} - {}".format(command, prefix, params),
                 "blue",
@@ -471,7 +493,7 @@ class ListBotIRCProtocol(irc.IRCClient):
 
         old_nick = prefix.split("!")[0]
         new_nick = params[0]
-        self.logger.log("{} is now known as {}".format(old_nick, new_nick))
+        log.msg("{} is now known as {}".format(old_nick, new_nick))
 
     def irc_RPL_LISTSTART(self, prefix, params):
         """
@@ -483,7 +505,7 @@ class ListBotIRCProtocol(irc.IRCClient):
 
         """
 
-        print(
+        log.msg(
             colored(
                 ">>> irc_RPL_LISTSTART {} - {}".format(prefix, params), "white"
             )
@@ -499,7 +521,7 @@ class ListBotIRCProtocol(irc.IRCClient):
 
         """
 
-        print(
+        log.msg(
             colored(">>> irc_RPL_LIST {} - {}".format(prefix, params), "grey")
         )
         server_tag = prefix.split(".")[-2]
@@ -521,7 +543,7 @@ class ListBotIRCProtocol(irc.IRCClient):
 
         """
 
-        print(
+        log.msg(
             colored(
                 ">>> irc_RPL_LISTEND {} - {}".format(prefix, params), "white"
             )
@@ -540,7 +562,7 @@ class ListBotIRCProtocol(irc.IRCClient):
     def irc_RPL_NAMESSTART(self, prefix, params):
         """ """
 
-        print(
+        log.msg(
             colored(
                 ">>> irc_RPL_NAMESSTART {} - {}".format(prefix, params), "white"
             )
@@ -556,7 +578,7 @@ class ListBotIRCProtocol(irc.IRCClient):
 
         """
 
-        print(
+        log.msg(
             colored(
                 ">>> irc_RPL_NAMREPLY {} - {}".format(prefix, params), "grey"
             )
@@ -581,7 +603,7 @@ class ListBotIRCProtocol(irc.IRCClient):
 
         """
 
-        print(
+        log.msg(
             colored(
                 ">>> irc_RPL_ENDOFNAMES {} - {}".format(prefix, params), "white"
             )
@@ -590,7 +612,7 @@ class ListBotIRCProtocol(irc.IRCClient):
         channel = params[1]
 
         if server_tag not in self._names_callback:
-            print(
+            log.msg(
                 colored(
                     "Error: {} not in _names_callback".format(server_tag),
                     "white",
@@ -618,14 +640,13 @@ class IRCFactory(protocol.ReconnectingClientFactory):
     --------
     """
 
-    def __init__(self, logger, description):
+    def __init__(self, description):
         """ """
         self.description = description
-        self.logger = logger
 
     def buildProtocol(self, addr):
         """ """
-        p = ListBotIRCProtocol(self.logger, self.description)
+        p = ListBotIRCProtocol(self.description)
         p.factory = self
         return p
 
@@ -672,7 +693,7 @@ class SendIRC(Config):
         """
 
         if reactor.running:
-            reactor.stop()
+            reactor.callFromThread(reactor.stop)
 
     def connect(self, description):
         """
@@ -687,7 +708,7 @@ class SendIRC(Config):
             reactor,
             "tcp:{}:{}".format(description["network"]["server"], 6667),
         )
-        factory = IRCFactory(self.logger, description)
+        factory = IRCFactory(description)
         d = endpoint.connect(factory)
         d.addCallback(lambda protocol: protocol.deferred)
         return d
@@ -702,21 +723,19 @@ class SendIRC(Config):
 
         """
 
-        log.startLogging(sys.stdout)
-
         if message:
             messages = message.split(". ")
         else:
             messages = self.irc["messages"][1]
 
-        print(messages)
+        log.msg(messages)
 
         irc_networks = [net for net in self.irc["networks"] if net["active"]]
         reactor.suggestThreadPoolSize(len(irc_networks))
         reactor.addSystemEventTrigger('before', 'shutdown', self.cleanup)
 
         for network in irc_networks:
-            print(network)
+            log.msg(network)
             # create factory protocol and application
             description = {"network": network, "messages": messages}
             reactor.callInThread(self.connect, description)

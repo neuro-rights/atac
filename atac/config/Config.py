@@ -24,59 +24,6 @@ from .settings import (
 from abc import ABCMeta, abstractmethod
 
 
-class MessageLogger:
-    """
-    Description:
-    ------------
-
-    Parameters:
-    -----------
-
-    """
-
-    def __init__(self, logfile):
-        """
-        Description:
-        ------------
-
-        Parameters:
-        -----------
-
-        """
-
-        self.logfile = logfile
-
-    def __del__(self):
-        """
-        Description:
-        ------------
-
-        Parameters:
-        -----------
-
-        """
-        self.close()
-
-
-
-    def write(self, message):
-        """
-        Description:
-        ------------
-
-        Parameters:
-        -----------
-
-        """
-        timestamp = time.strftime("[%H:%M:%S]", time.localtime(time.time()))
-        print(f"{timestamp} {message}\n")
-        self.logfile.write(f"{message}\n")
-        self.logfile.flush()
-
-    def close(self):
-        self.logfile.close()
-
-
 class Config(metaclass=ABCMeta):
     """
     Description:
@@ -117,11 +64,6 @@ class Config(metaclass=ABCMeta):
             self.generate_key()
 
         self.config_file_path = Path(config_file_path)
-
-        # initialize logging
-        if not os.path.isdir(os.getcwd() + "/log"):
-            os.makedirs(os.getcwd() + "/log")
-        self.logger = MessageLogger(open("log/debug.log", "w"))
 
     def generate_key(self):
         """

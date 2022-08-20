@@ -25,6 +25,7 @@ Pillow
 pyaxmlparser
 pygments
 pylatexenc
+pyppeteer
 pyspellchecker
 pytgbot
 python-dotenv

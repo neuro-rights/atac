@@ -46,8 +46,10 @@ invalid=dict(
     files=[
         ".pdf",
         ".iso",
+        ".7z",
         ".gz",
         ".bz2",
+        ".rar",
         ".tar",
         ".zip",
         ".jpg",
