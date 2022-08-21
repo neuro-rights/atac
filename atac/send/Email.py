@@ -267,8 +267,8 @@ class SendEmail(Config):
         auth, _ = self.get_config()
         encrypted_emails = []
         message_content = get_file_content(message_file_path)
-        print("sending email batches…")
 
+        print("sending email batches…")
         with tqdm(total=len(email_batches)) as progress:
             for email_batch in email_batches:
 

@@ -32,8 +32,6 @@ from twisted.python.threadpool import ThreadPool
 
 from ..config.Config import Config
 
-log.startLogging(sys.stdout)
-
 
 class ListBotIRCProtocol(irc.IRCClient):
     """
@@ -722,6 +720,8 @@ class SendIRC(Config):
         -----------
 
         """
+
+        log.startLogging(sys.stdout)
 
         if message:
             messages = message.split(". ")
