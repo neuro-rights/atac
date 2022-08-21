@@ -296,10 +296,8 @@ def whatsapp(arguments):
         message_file_path = getattr(arguments, "message_file")
     if arguments.phones_file:
         phone_files_path = getattr(arguments, "phones_file")
-    if arguments.target:
-        target = getattr(arguments, "target")
 
-    whatsapper.send_pywhatkit(phone_files_path, message_file_path)
+    whatsapper.send(phone_files_path, message_file_path)
 
 
 if __name__ == "__main__":
@@ -544,6 +542,30 @@ if __name__ == "__main__":
     parser_scrape.add_argument("-u", dest="url", help="The URL to scrape.")
     parser_scrape.add_argument("-v", dest="verbose")
     parser_scrape.set_defaults(func=scrape)
+
+
+    ###########################################
+    # create the parser for the whatsapp command #
+    ###########################################
+    parser_whatsapp = subparsers.add_parser("whatsapp")
+    parser_whatsapp.add_argument(
+        "-c", dest="config_file", type=str, help="use config file path"
+    )
+    parser_whatsapp.add_argument(
+        "-e", dest="encrypted_config", action="store_true"
+    )
+    parser_whatsapp.add_argument(
+        "-k", dest="key_file", type=str, help="use key file path"
+    )
+    parser_whatsapp.add_argument(
+        "-m", dest="message_file", type=str, help="path to message file"
+    )
+    parser_whatsapp.add_argument(
+        "-p", dest="phones_file", type=str, help="path to csv dir or file"
+    )
+
+    parser_whatsapp.add_argument("-v", dest="verbose")
+    parser_whatsapp.set_defaults(func=whatsapp)
 
     
     ##################

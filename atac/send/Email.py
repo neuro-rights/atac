@@ -1,6 +1,9 @@
+from __future__ import print_function
+
 import base64
 from envelope import Envelope
 import getpass
+import io
 import logging
 import json
 import mistune
@@ -13,6 +16,16 @@ import time
 from termcolor import colored
 from tqdm import tqdm
 import validators
+
+from OpenSSL.SSL import SSLv3_METHOD
+
+from twisted.mail.smtp import ESMTPSenderFactory
+from twisted.python.usage import Options, UsageError
+from twisted.internet.ssl import ClientContextFactory
+from twisted.internet.defer import Deferred
+from twisted.internet import reactor
+
+from email.mime.text import MIMEText
 
 from ..config.Config import Config
 from ..compose.Compose import Compose
@@ -126,6 +139,81 @@ class SendEmail(Config):
 
         return contact_files
 
+    def sendmail(self, authenticationUsername, authenticationSecret, fromAddress, toAddress, messageFile, smtpHost, smtpPort=25):
+        """
+        @param authenticationUsername: The username with which to authenticate.
+        @param authenticationSecret: The password with which to authenticate.
+        @param fromAddress: The SMTP reverse path (ie, MAIL FROM)
+        @param toAddress: The SMTP forward path (ie, RCPT TO)
+        @param messageFile: A file-like object containing the headers and body of
+        the message to send.
+        @param smtpHost: The MX host to which to connect.
+        @param smtpPort: The port number to which to connect.
+
+        @return: A Deferred which will be called back when the message has been
+        sent or which will errback if it cannot be sent.
+        """
+
+        # Create a context factory which only allows SSLv3 and does not verify
+        # the peer's certificate.
+        #contextFactory = ClientContextFactory()
+        #contextFactory.method = SSLv3_METHOD
+        resultDeferred = Deferred()
+        senderFactory = ESMTPSenderFactory(
+            authenticationUsername,
+            authenticationSecret,
+            fromAddress,
+            toAddress,
+            messageFile,
+            resultDeferred,
+            heloFallback=True,
+            requireAuthentication=True,
+            requireTransportSecurity=False)
+
+        #reactor.connectSSL(smtpHost, smtpPort, senderFactory, ClientContextFactory())
+        reactor.connectTCP(smtpHost, smtpPort, senderFactory)
+
+        return resultDeferred
+
+    def cbSentMessage(self, result):
+        """
+        Called when the message has been sent.
+
+        Report success to the user and then stop the reactor.
+        """
+        print("Message sent")
+        reactor.stop()
+
+    def ebSentMessage(self, err):
+        """
+        Called if the message cannot be sent.
+
+        Report the failure to the user and then stop the reactor.
+        """
+        err.printTraceback()
+        reactor.stop()
+
+    def send_email_twisted(self, mailing_list, message_content, subject):
+        
+        auth, _ = self.get_config()    
+        
+        message = MIMEText("https://github.com/neuro-rights/atac/blob/main/MOTIVATION.md")
+        message["Subject"] = subject
+        message["From"] = auth["sender"]
+        message["To"] = "; ".join(mailing_list)
+
+        result = self.sendmail(
+            auth["user"],
+            auth["password"],
+            auth["sender"],
+            "; ".join(mailing_list), 
+            io.StringIO("Test"),
+            auth["server"],
+            auth["port"]
+        )
+        result.addCallbacks(self.cbSentMessage, self.ebSentMessage)
+        reactor.run()
+
     def send_email(self, mailing_list, message_content, subject):
         """
         Description:
@@ -157,11 +245,6 @@ class SendEmail(Config):
 
             recipients_status = envelope.check(check_mx=True, check_smtp=True)
             print(recipients_status)
-            
-            """
-            message_preview = envelope.preview()
-            print(message_preview)
-            """
 
             envelope.send(send=False).send(send=True)
 
@@ -183,15 +266,17 @@ class SendEmail(Config):
         print(subject)
         auth, _ = self.get_config()
         encrypted_emails = []
-        message = get_file_content(message_file_path)
+        message_content = get_file_content(message_file_path)
         print("sending email batches…")
 
         with tqdm(total=len(email_batches)) as progress:
             for email_batch in email_batches:
-                #print(email_batch)
-                send_status = self.send_email(email_batch, message, subject)
+
+                send_status = self.send_email(email_batch, message_content, subject)
                 if send_status != 0:
                     print(colored("An error occurred: {}".format(send_status), "white", "on_red"))
+
+                # self.send_email_twisted(email_batch, message_content, subject)
 
                 progress.update(1)
                 print("Sleeping for {} seconds...".format(self.email["emailthrottleinterval"]))
@@ -222,11 +307,10 @@ class SendEmail(Config):
                 ),
             )
         )
+
         random.seed()
         random.shuffle(recipient_emails)
-        print(
-            "After shuffling: {}".format(json.dumps(recipient_emails, indent=4))
-        )
+
         batch_emails = [
             [
                 recipient
