@@ -86,10 +86,7 @@ class ListBotIRCProtocol(irc.IRCClient):
 
         """
 
-        if reactor.running:
-            reactor.callFromThread(reactor.stop)
-
-        sys.exit(0)
+        self.sendLine("QUIT")
 
     def _sendMessage(self, msg, target, nick=None):
         """
@@ -493,6 +490,19 @@ class ListBotIRCProtocol(irc.IRCClient):
         new_nick = params[0]
         log.msg("{} is now known as {}".format(old_nick, new_nick))
 
+    def irc_QUIT(self, prefix, params):
+        """
+        Description:
+        ------------
+
+        Parameters:
+        -----------
+
+        """
+        
+        if reactor.running:
+            reactor.callFromThread(reactor.stop)
+
     def irc_RPL_LISTSTART(self, prefix, params):
         """
         Description:
@@ -693,6 +703,8 @@ class SendIRC(Config):
         if reactor.running:
             reactor.callFromThread(reactor.stop)
 
+        sys.exit(0)
+
     def connect(self, description):
         """
         Description:
@@ -726,7 +738,7 @@ class SendIRC(Config):
         if message:
             messages = message.split(". ")
         else:
-            messages = self.irc["messages"][1]
+            messages = self.irc["messages"][-1]
 
         log.msg(messages)
 
