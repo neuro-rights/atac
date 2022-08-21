@@ -156,8 +156,8 @@ class SendEmail(Config):
 
         # Create a context factory which only allows SSLv3 and does not verify
         # the peer's certificate.
-        #contextFactory = ClientContextFactory()
-        #contextFactory.method = SSLv3_METHOD
+        contextFactory = ClientContextFactory()
+        contextFactory.method = SSLv3_METHOD
         resultDeferred = Deferred()
         senderFactory = ESMTPSenderFactory(
             authenticationUsername,
@@ -167,11 +167,15 @@ class SendEmail(Config):
             messageFile,
             resultDeferred,
             heloFallback=True,
-            requireAuthentication=True,
-            requireTransportSecurity=False)
+            #requireAuthentication=True,
+            #requireTransportSecurity=(True if smtpPort == 587 else False)
+            contextFactory=(contextFactory if smtpPort == 587 else None)
+        )
 
-        #reactor.connectSSL(smtpHost, smtpPort, senderFactory, ClientContextFactory())
-        reactor.connectTCP(smtpHost, smtpPort, senderFactory)
+        if smtpPort == 465:
+            reactor.connectSSL(smtpHost, smtpPort, senderFactory, ClientContextFactory())
+        else:
+            reactor.connectTCP(smtpHost, smtpPort, senderFactory)
 
         return resultDeferred
 
@@ -233,8 +237,6 @@ class SendEmail(Config):
             auth_obj["user"]=auth["user"]
         if "password" in auth:
             auth_obj["password"]=auth["password"]
-        if "security" in auth:
-            auth_obj["security"]=auth["security"],
 
         try:
 
@@ -276,7 +278,7 @@ class SendEmail(Config):
                 if send_status != 0:
                     print(colored("An error occurred: {}".format(send_status), "white", "on_red"))
 
-                # self.send_email_twisted(email_batch, message_content, subject)
+                #self.send_email_twisted(email_batch, message_content, subject)
 
                 progress.update(1)
                 print("Sleeping for {} seconds...".format(self.email["emailthrottleinterval"]))
