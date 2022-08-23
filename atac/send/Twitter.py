@@ -33,16 +33,21 @@ class SendTwitter(Config):
         super().__init__(encrypted_config, config_file_path, key_file_path)
         self.load_config(config_file_path)
         self.config = self.data["twitter"]
+ 
+        """
+        self.client = tweepy.Client(access_token=self.config["accesstoken"],
+                            access_token_secret=self.config["accesstokensecret"],
+                            consumer_key=self.config["consumerkey"],
+                            consumer_secret=self.config["consumersecret"])
+        """
 
-        self.auth = tweepy.OAuthHandler(self.config['consumer_key'], self.config['consumer_secret'])
-        self.auth.set_access_token(self.config['access_token'], self.config['access_token_secret'])
-        self.twitter = tweepy.API(self.auth)
+        auth = tweepy.OAuth1UserHandler(
+            self.config["consumerkey"], self.config["consumersecret"],
+            self.config["accesstoken"], self.config["accesstokensecret"]
+        )
+        self.client = tweepy.API(auth)
 
-
-    def compose_message(self, message):
-        pass
-
-    def send(self, message, image=None):
+    def send(self, text, media_path=None):
         """
         Description:
         ------------
@@ -52,8 +57,13 @@ class SendTwitter(Config):
 
         """
 
-        if image:
-            self.twitter.update_with_media(image, message)
-        else:
-            self.twitter.update_status(message)
+        for handle in self.config["handles"]:
+            print(self.config["handles"])
+            message = "{} {}".format(handle, text)
+            print("{} {}".format(len(message), message))
+            if 300 < len(message):
+                print("message too long > 300 characters. Please rewrite message")
+                break
+            response = self.client.update_status(message)
+            print(response)
 

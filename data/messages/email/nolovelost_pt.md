@@ -1,4 +1,4 @@
-<p align="center" width="100%"><img src="https://raw.githubusercontent.com/neuro-rights/atac/master/data/messages/assets/img/jesus/jesus_king.png"></p>
+<p align="center" width="100%"><img src="https://raw.githubusercontent.com/neuro-rights/atac/main/data/assets/img/jesus/jesus_king.png"></p>
 
 
 O meu pai trabalhou durante 30 anos nos tribunais e muitas vezes saia pela meia noite do tribunal cheio de processos.
@@ -12,8 +12,8 @@ Vossas excelencias podiam sair do trabalho pelas 5:00 da tarde, mas em vez de ne
 
 O abuso de biofotonica para idiotas se divertirem induzindo estados psicoticos sinteticos com cibertortura continuada escolhendo momentos na presenca de idosos (como os meus pais no fim da vida para jogarem violencia contra os mesmos), mulheres e criancas (sistematicamente varias vezes por dia e a meio da noite durante anos como hienas cobardes agindo em bando - GANG) participando em jogos de suicidio tipo baleia-azul em formato de orgia / espectaculo interactivo para simularem sindroma de Van Gogh, enquanto andam a dar fodas uns nos outros um de cada vez.
 
-<p align="center" width="100%"><img src="https://raw.githubusercontent.com/neuro-rights/atac/master/data/messages/assets/img/alumni_police/alumni_police.gif"></p>
+<p align="center" width="100%"><img src="https://raw.githubusercontent.com/neuro-rights/atac/main/data/assets/img/jesus/alumni_police.gif"></p>
 
 Sem mais...
 
-<p align="center" width="100%"><img src="https://raw.githubusercontent.com/neuro-rights/atac/master/data/messages/assets/img/jesus/mary.png"></p>
+<p align="center" width="100%"><img src="https://raw.githubusercontent.com/neuro-rights/atac/main/data/assets/img/jesus/jesus/mary.png"></p>

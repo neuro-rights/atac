@@ -17,7 +17,7 @@ from .settings import (
     email_settings,
     irc_settings,
     scrape_settings,
-    social_settings,
+    twitter_settings,
     tor_settings,
 )
 
@@ -306,10 +306,10 @@ class Config(metaclass=ABCMeta):
         email = dict(email=self.dict_from_module(email_settings))
         irc = dict(irc=self.dict_from_module(irc_settings))
         scrape = dict(scrape=self.dict_from_module(scrape_settings))
-        social = dict(social=self.dict_from_module(social_settings))
+        twitter = dict(twitter=self.dict_from_module(twitter_settings))
         tor = dict(tor=self.dict_from_module(tor_settings))
         self.data = dict(
-            **chat, **compose, **email, **irc, **scrape, **social, **tor
+            **chat, **compose, **email, **irc, **scrape, **twitter, **tor
         )
         
         if not "PYTEST_CURRENT_TEST" in os.environ:

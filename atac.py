@@ -278,6 +278,24 @@ def scrape(arguments):
             )
             catcher_thread.start()
 
+# sub-command functions
+def twitter(arguments):
+    """
+    """
+    encrypted_config, config_file_path, key_file_path = get_config_arguments(
+        arguments
+    )
+    twitter = atac.SendTwitter(encrypted_config, config_file_path, key_file_path)
+
+    media_path = None
+    text = None
+    if arguments.text:
+        text = getattr(arguments, "text")
+    if arguments.media_path:
+        media_path = getattr(arguments, "media_path")
+
+    twitter.send(text, media_path)
+
 
 # sub-command functions
 def whatsapp(arguments):
@@ -506,9 +524,9 @@ if __name__ == "__main__":
     parser_irc.set_defaults(func=irc)
 
 
-    #############################################
+    ############################################
     # create the parser for the scrape command #
-    #############################################
+    ############################################
     parser_scrape = subparsers.add_parser("scrape")
     parser_scrape.add_argument(
         "-c", dest="config_file", type=str, help="use config file path"
@@ -544,9 +562,33 @@ if __name__ == "__main__":
     parser_scrape.set_defaults(func=scrape)
 
 
-    ###########################################
+    #############################################
+    # create the parser for the twitter command #
+    #############################################
+    parser_twitter = subparsers.add_parser("twitter")
+    parser_twitter.add_argument(
+        "-c", dest="config_file", type=str, help="use config file path"
+    )
+    parser_twitter.add_argument(
+        "-e", dest="encrypted_config", action="store_true"
+    )
+    parser_twitter.add_argument(
+        "-k", dest="key_file", type=str, help="use key file path"
+    )
+    parser_twitter.add_argument(
+        "-t", dest="text", type=str, help="text"
+    )
+    parser_twitter.add_argument(
+        "-m", dest="media_path", type=str, help="path to media file"
+    )
+
+    parser_twitter.add_argument("-v", dest="verbose")
+    parser_twitter.set_defaults(func=twitter)
+
+
+    ##############################################
     # create the parser for the whatsapp command #
-    ###########################################
+    ##############################################
     parser_whatsapp = subparsers.add_parser("whatsapp")
     parser_whatsapp.add_argument(
         "-c", dest="config_file", type=str, help="use config file path"

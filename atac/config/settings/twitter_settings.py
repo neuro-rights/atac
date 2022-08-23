@@ -1,0 +1,13 @@
+consumerkey=""
+consumersecret=""
+accesstoken=""
+accesstokensecret=""
+bearertoken=""
+handles=[
+    "@UN",
+    "@UNPOL",
+    "@UNODC",
+    "@WHO",
+    "@Cyber_Torture",
+    "@theintercept"
+]
