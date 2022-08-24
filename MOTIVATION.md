@@ -48,9 +48,6 @@ Recruited Colegio Militar (largo da Luz, Lisbon, Portugal) alumni, and criminal 
 **Tito Eurico Miranda Fernandes** (a confirmed catholic) went as far as sabotaging phone calls with my mother and even prayer on Christmas day, based on the saying **the deeper the grief, the closer to god**, followed by keeping me away from church by having me tortured genitally on multiple occasions (with a psychotic and demonic idiot forcing me to feel like he was **playing marbles with my testicles** during a service inside a church.
 
 
-**IT'S A DEMONIC RITUAL OF PLACING PSYCHIATRY ABOVE GOD AND DENYING NEURO-RIGHTS AND BIO-PHOTONICS TO US ALL TO FORCE CONVENTIONAL PHARMACO-THERAPY AND SATISFY PSYCHIATRIC AGENDAS FROM THE 80's AS SEEN IN [DSM-V CONTROVERSY](https://en.wikipedia.org/wiki/Diagnostic_and_Statistical_Manual_of_Mental_Disorders#Criticisms)**
-
-
 <p align="center" width="100%"><img src="https://raw.githubusercontent.com/neuro-rights/atac/main/data/assets/img/jesus/stella_maris.png"></p>
 
 

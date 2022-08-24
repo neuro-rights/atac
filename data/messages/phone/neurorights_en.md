@@ -1,7 +1,13 @@
 ### Motivation
 
 
-I fled Portugal more than once to avoid extrajudicial sentences of the Colegio Militar CM-93 (aka Pedo-93) alumni group who gave the school a reputation of being a **"pedo school"** linked to **Pedro Miguel de Brito Esteves Grilo @PSP**, **Joao Filipe Saraiva Pinheiro** and **Eduardo Marcal Grilo** (former portuguese minister of education and former director of FCG) by hiding my case of child abuse in 1993 (after so many other cases), followed by the systematic abuse of my parents after I left in 1996 (including intercourse sabotage to silence us and coerce psychiatric care) with a blue-whale style game being forced upon us that lasts to this day via abuse of bio-photonics, attempting to portrait me as a violent lowlife by inducing synthetic states of psychosis in the presence of my parents and women in the middle of the night to use them as targets of directed violence as a repeated stochastic gamble, to come to the Netherlands and have my previous employer, the **infamous dutch coward Jasper Kums**, becoming criminally associated with these individuals and those recruited by them, participating in extrajudicial cyber-torture proceedings exacted via abuse of bio-photonics, as **workplace revenge** to break my teeth, pass me as a work incompetent schizophrenic, direct violence to my parents, sabotage my wedding and turn me homeless in a daily ritual that lasts since 2016 as a interactive spectacle to coerce choice between:
+Colegio Militar alumni (largo da Luz Portugal) and criminal associates linked to Luis Nazareth Carvalho Figueira, Augusto Tavares, Tiago Goncalves @Aegis and the 'Anonymous' cyber-terrorist group are attempting to place responsibility for the war on Ukraine since 2016 on a group of female AJAX football fans on a daily basis. 
+
+
+These individuals are responsible for hate mongering worldwide since 1993 with their faith trials and mocking of Christianity, the imaculate conception of the Virgin May, and crucifixion of Jesus Christ in a manner so putrid and foul it lead to the murders of Alexander Litvinenko in 2006, Matthew Puncher in 2016 and blue-whale suicide games resulting in 1000 deaths wordlwide, the invasion of Ukraine on the 24/02/2022 and a threat of thermonuclear war on the school anniversary 3/3/2022.
+
+
+I fled Portugal more than once to avoid extrajudicial sentences of the Colegio Militar CM-93 group involved in abusing directed energy weapons, parametric crowd-control systems, biophotonics and optoaccoustics to force the population to complete tasks unde torture as blue-whale suicide games linked to **Pedro Miguel de Brito Esteves Grilo @PSP**, **Joao Filipe Saraiva Pinheiro** and **Eduardo Marcal Grilo** (former portuguese minister of education and former director of FCG) since 1993, abusing me as a minor followed by the systematic abuse of my parents after I left in 1996 (including intercourse sabotage to silence us and coerce psychiatric care) with a blue-whale style game being forced upon us that lasts to this day via abuse of bio-photonics, attempting to portrait me as a violent lowlife by inducing synthetic states of psychosis in the presence of my parents and women in the middle of the night to use them as targets of directed violence as a repeated stochastic gamble, to come to the Netherlands and have my previous employer, the **infamous dutch coward Jasper Kums**, becoming criminally associated with these individuals and those recruited by them, participating in extrajudicial cyber-torture proceedings exacted via abuse of bio-photonics, as **workplace revenge** to break my teeth, pass me as a work incompetent schizophrenic, direct violence to my parents, sabotage my wedding to a Ukranian women and attenmpted to turn me homeless in a daily ritual that lasts since 2016 as a interactive spectacle to coerce choice between:
 
 
 1. Being forced to leave the Netherlands by systematically being incapacitated to work, so I am unable to repay the pile of debt forced upon me over the course of 6 years of being incapacitated to work, to at the very end sabotage a simple project all day exacting vibrotactile torture to simulate Van Gogh syndrome and articulating my tongue to make sure I can't earn any money, giving Portuguese immigrants a bad reputation as being untrustworthy and Portuguese Government a bad reputation, not only in the Netherlands, but worldwide.
@@ -36,9 +42,6 @@ Recruited Colegio Militar (largo da Luz, Lisbon, Portugal) alumni, and criminal 
 **Tito Eurico Miranda Fernandes** (a confirmed catholic) went as far as sabotaging phone calls with my mother and even prayer on Christmas day, based on the saying **the deeper the grief, the closer to god**, followed by keeping me away from church by having me tortured genitally on multiple occasions (with a psychotic and demonic idiot forcing me to feel like he was **playing marbles with my testicles** during a service inside a church.
 
 
-**IT'S A DEMONIC RITUAL OF PLACING PSYCHIATRY ABOVE GOD AND DENYING NEURO-RIGHTS AND BIO-PHOTONICS TO US ALL TO FORCE CONVENTIONAL PHARMACO-THERAPY AND SATISFY PSYCHIATRIC AGENDAS FROM THE 80's AS SEEN IN [DSM-V CONTROVERSY](https://en.wikipedia.org/wiki/Diagnostic_and_Statistical_Manual_of_Mental_Disorders#Criticisms)**
-
-
 In order to force me to return to Portugal against my will, to endure even harsher extrajudicial punishment, the CM-93 group became criminally associated with my former employer **Jasper Kums** and a Portuguese colleague at **Quby - Amsterdam** named **Goncalo Carvalho**, to pass me as an incompetent paranoid schizophrenic with synthetic tics and facial spasms, **as workplace revenge**.
 
 
@@ -58,9 +61,7 @@ The individuals recruited by the CM-93 group to exact the extrajudicial trials a
 
 * those linked to **Ivo Francisco**, **Tiago Santos Sousa** and **Pedro Caetano**
 
-* those linked to **Tiago Goncalves - AEGIS insurance**, **Ricardo Rebordão de Brito**, **Alberto Rebordão de Brito**, **Pedro Nuno da Silva Rocha** and **Eduardo Metzner**
-
-* medical doctors linked to **Frederico Ferronha (urologist)** with sentences of vibotactile genital torture and cybersodomy to simulate psychosis, Van Gogh syndrome and paranoid schizophrenia systematicaly forcing victims to want to stab themselves all over their body like Matthew Puncher and directing violence to elderly parents at the end of their life.
+* those linked to **Tiago Goncalves - AEGIS insurance**, **Ricardo Rebordão de Brito**, **Alberto Rebordão de Brito**, **Pedro Nuno da Silva Rocha**
 
 
 **The daily ritual of articulating my tongue with the words "psychiatrist", "psychiatry" and "medication"** while cyber-sodomizing me and torturing me genitally is a protocol designed to create a piling psychological antagonistic effect and monger hatred, **significantly increasing the odds of directed violence towards psychiatrists and medical staff in a clinical scenario.**
