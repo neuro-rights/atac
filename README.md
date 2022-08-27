@@ -50,7 +50,7 @@ it is based on [https://chato.cl/papers/castillo_06_controlling_queue_size_web_c
 ### Motivation
 
 
-Colegio Militar alumni (largo da Luz Portugal) and criminal associates linked to the mass murdering blue-whale suicide game players linked to Luis Nazareth Carvalho Figueira, Augusto Tavares, Tiago Goncalves @Aegis with links to the 'Anonymous' cyber-terrorist group Hugo Farinha, Joao Felipe Saraiva Pinheiro, Pedro Miguel de Brito Esteves Grilo @PSP and criminal associates of Goncalo Bandeira Duarte are attempting to place responsibility for the war on Ukraine on a group of female AJAX football fans on a daily basis.
+Colegio Militar alumni (largo da Luz Portugal) and criminal associates linked to the mass murdering blue-whale suicide game players linked to Luis Nazareth Carvalho Figueira, Augusto Tavares, Tiago Goncalves @Aegis with links to the 'Anonymous' cyber-terrorist group Hugo Farinha, Joao Felipe Saraiva Pinheiro, Pedro Miguel de Brito Esteves Grilo @PSP and criminal associates of Goncalo Bandeira Duarte are attempting to place responsibility for the war on Ukraine on a group of female AJAX football fans on a daily basis and programming me in the middle of the night to kill my own parents are forcing me to lose my home trying to coerce me to return to Portugal.
 
 
 
