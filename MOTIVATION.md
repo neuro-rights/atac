@@ -1,7 +1,7 @@
 <p align="center" width="100%"><img src="https://raw.githubusercontent.com/neuro-rights/atac/main/data/assets/img/jesus/jesus_king.png"></p>
 
 
-Colegio Militar alumni (largo da Luz Portugal) and criminal associates linked to the mass murdering blue-whale suicide game players linked to Luis Nazareth Carvalho Figueira, Augusto Tavares, Tiago Goncalves @Aegis with links to the 'Anonymous' cyber-terrorist group Hugo Farinha, Joao Felipe Saraiva Pinheiro, Pedro Miguel de Brito Esteves Grilo @PSP and criminal associates of Goncalo Bandeira Duarte are attempting to place responsibility for the war on Ukraine on a group of female AJAX football fans on a daily basis and programming me in the middle of the night to kill my own parents are forcing me to lose my home trying to coerce me to return to Portugal.
+Mass rapist Colegio Militar alumni (largo da Luz Portugal) and criminal associates linked to the TAP Pilot Frederico Leitao and the mass murdering blue-whale suicide game players linked to Luis Nazareth Carvalho Figueira, Augusto Tavares, Tiago Goncalves @Aegis with links to the 'Anonymous' cyber-terrorist group Hugo Farinha, Joao Felipe Saraiva Pinheiro, Pedro Miguel de Brito Esteves Grilo @PSP and criminal associates of Goncalo Bandeira Duarte are attempting to place responsibility for the war on Ukraine on a group of female AJAX football fans on a daily basis and programming me in the middle of the night to kill my own parents are forcing me to lose my home trying to coerce me to return to Portugal.
 
 
 
