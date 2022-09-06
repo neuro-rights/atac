@@ -50,7 +50,7 @@ it is based on [https://chato.cl/papers/castillo_06_controlling_queue_size_web_c
 ### Motivation
 
 
-Colegio Militar alumni (largo da Luz Portugal) acting like remote mass rapists and criminal associates linked to the TAP Pilot Frederico Leitao and the mass murdering blue-whale suicide game players linked to Joao Felipe Saraiva Pinheiro, Pedro Miguel de Brito Esteves Grilo @PSP Luis Nazareth Carvalho Figueira, Augusto Tavares, Tiago Goncalves @Aegis with links to the 'Anonymous' cyber-terrorist group, Hugo Farinha and criminal associates of Goncalo Bandeira Duarte and the inbfamous world renowed cocaine addict Carla Maria marinho Rodrigues are attempting to place responsibility for the war on Ukraine on a group of female AJAX football fans on a daily basis and programming me in the middle of the night to kill my own parents are forcing me to lose my home trying to coerce me to return to Portugal.
+Colegio Militar alumni (largo da Luz Portugal) acting like remote mass rapists and criminal associates linked to the TAP Pilot Frederico Leitao and the mass murdering blue-whale suicide game players linked to Joao Felipe Saraiva Pinheiro, Pedro Miguel de Brito Esteves Grilo @PSP Luis Nazareth Carvalho Figueira, Augusto Tavares, Tiago Goncalves @Aegis with links to the 'Anonymous' cyber-terrorist group, Hugo Farinha and criminal associates of Goncalo Bandeira Duarte and the infamous world renowed cocaine addict Carla Maria marinho Rodrigues are attempting to place responsibility for the war on Ukraine on a group of female AJAX football fans on a daily basis and programming me in the middle of the night to kill my own parents are forcing me to lose my home trying to coerce me to return to Portugal.
 
 
 
