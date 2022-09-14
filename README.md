@@ -50,10 +50,16 @@ it is based on [https://chato.cl/papers/castillo_06_controlling_queue_size_web_c
 ### Motivation
 
 
-Colegio Militar alumni (largo da Luz Portugal) acting like remote mass rapists and murdererers criminally associated to the TAP Pilot Frederico Leitao and the mass murdering blue-whale suicide game players linked to Joao Felipe Saraiva Pinheiro, Pedro Miguel de Brito Esteves Grilo @PSP Luis Nazareth Carvalho Figueira, Augusto Tavares, Tiago Goncalves @Aegis with links to the 'Anonymous' cyber-terrorist group, Hugo Farinha and criminal associates of Goncalo Bandeira Duarte and the infamous world renowed cocaine addict and anal prostitute Carla Maria marinho Rodrigues are attempting to place responsibility for the war on Ukraine on a group of female AJAX football fans on a daily basis and programming me in the middle of the night to kill my own parents are forcing me to lose my home trying to coerce me to return to Portugal.
+Neurorights Activism - The Risk subsidies for law enforcement Scam versus the remote healthcare of the population in the light of Khlebnikov's futurist views from the early 20th century via Photobiomodulation, Optoacoustic Neuromodulation and Optoacoustic Brain stimulation (Neurotechnologies which have been available for decades).
 
 
-These individuals are responsible for hate mongering worldwide since 1993 with their blue-whale suicide games resorting to vibrotactile cybertorture to force their victims to complete tasks and engaging in faith trials mocking: Christianity, the immaculate conception of the Virgin Mary, and crucifixion of Jesus Christ in a manner so putrid and foul it lead to the murders of Alexander Litvinenko in 2006, Matthew Puncher in 2016 and blue-whale suicide games resulting in 1000 deaths worldwide, the invasion of Ukraine on the 24/02/2022 and a threat of thermonuclear war on the school anniversary 3/3/2022.
+Colegio Militar alumni (largo da Luz Portugal) linked to law enforcement acting like remote mass rapists and murdererers demanding risk subsidies are criminally associated to the TAP Pilot Frederico Leitao and the mass murdering blue-whale suicide game players linked to Joao Felipe Saraiva Pinheiro, Pedro Miguel de Brito Esteves Grilo @PSP Luis Nazareth Carvalho Figueira, Augusto Tavares, Tiago Goncalves @Aegis with links to the 'Anonymous' cyber-terrorist group, Hugo Farinha and criminal associates of Goncalo Bandeira Duarte and the infamous world renowed cocaine addict Carla Maria marinho Rodrigues are attempting to place responsibility for the war on Ukraine on a group of female AJAX football fans on a daily basis and programming me in the middle of the night to kill my own parents are forcing me to lose my home trying to coerce me to return to Portugal whilst the police demands risk subsidies to the government.
+
+
+These individuals are responsible for hate mongering worldwide since 1993 with their blue-whale suicide games and social stratification ploys resorting to vibrotactile cybertorture to force their victims to complete tasks and engaging in faith trials mocking: Christianity, the immaculate conception of the Virgin Mary, and crucifixion of Jesus Christ in a manner so putrid and foul it lead to the murders of Alexander Litvinenko in 2006, Matthew Puncher in 2016 and blue-whale suicide games resulting in 1000 deaths worldwide, the invasion of Ukraine on the 24/02/2022 and a threat of thermonuclear war on the school anniversary 3/3/2022.
+
+Instead we could have remote healthcare delivered seamlessly and remotely to the population at a much lower cost...
+
 
 [See Motivation for more details](MOTIVATION.md)
 
