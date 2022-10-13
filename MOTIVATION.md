@@ -364,4 +364,4 @@ Some details worthy of your attention:
 [^4]: Regulars at Jardim do Adamastor (Lisbon) - Luis Muskiado (who specializes in inducing psychosis with vibrotactile cybertorture to simulate van gogh syndrome), Capoverdian named Carlos - commonly known as "Calo" who specializes in torturing people genitally to gamble self-harm, Tiago Santos Sousa, Joel da Fonte, Filipa Sequeira, Humberto Mota, Tania Borboleta, Sara Lioness
 [^5]: Quby employees - Goncalo Carvalho
 [^6]: Lux-Fragil former employees - rui ricardo borges marque sabino reino and criminal associates
-[^7]: Arkin personnel (Arjen Sutterland, Emile Barkhof, Eefje Suk, Sara Hoff)
+[^7]: Arkin personnel (Arjen Sutterland, Emile Barkhof, Eefje Suk, Sara Hoff, This Burger, Kimberly Babel)
