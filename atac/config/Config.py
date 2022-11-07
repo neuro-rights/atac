@@ -76,7 +76,7 @@ class Config(metaclass=ABCMeta):
         """
 
         print(inspect.stack()[1].function)
-        if "PYTEST_CURRENT_TEST" in os.environ:
+        if "GITHUB_ACTION" in os.environ:
             password = bytes("M4m4k154n", encoding="utf-8")
             salt = bytes("77", encoding="utf-8")
         else:
@@ -222,7 +222,7 @@ class Config(metaclass=ABCMeta):
         -----------
 
         """
-        if "PYTEST_CURRENT_TEST" in os.environ:
+        if "GITHUB_ACTION" in os.environ:
             return
 
         email_user = input("mail User: ")
@@ -253,7 +253,7 @@ class Config(metaclass=ABCMeta):
 
         """
 
-        if "PYTEST_CURRENT_TEST" in os.environ:
+        if "GITHUB_ACTION" in os.environ:
             return
 
         irc_server_hostname = input("IRC Server Hostname: ")
@@ -284,7 +284,7 @@ class Config(metaclass=ABCMeta):
 
         """
 
-        if "PYTEST_CURRENT_TEST" in os.environ:
+        if "GITHUB_ACTION" in os.environ:
             if "MAIL_USER" not in os.environ:
                 print("MAIL_USER is unset")
                 sys.exit(1)
@@ -313,7 +313,7 @@ class Config(metaclass=ABCMeta):
         )
         
         print(os.environ)
-        if not "PYTEST_CURRENT_TEST" in os.environ:
+        if not "GITHUB_ACTION" in os.environ:
             do_email_auth = input("would you like to add an email account (Y/N)? ")
             if do_email_auth == "Y":
                 email_auth = self.add_email_auth()
