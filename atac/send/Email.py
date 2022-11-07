@@ -17,14 +17,6 @@ from termcolor import colored
 from tqdm import tqdm
 import validators
 
-#from OpenSSL.SSL import SSLv3_METHOD
-
-from twisted.mail.smtp import ESMTPSenderFactory
-from twisted.python.usage import Options, UsageError
-from twisted.internet.ssl import ClientContextFactory
-from twisted.internet.defer import Deferred
-from twisted.internet import reactor
-
 from email.mime.text import MIMEText
 
 from ..config.Config import Config
@@ -138,85 +130,6 @@ class SendEmail(Config):
                     contact_files.append(os.path.join(root, f))
 
         return contact_files
-
-    def sendmail(self, authenticationUsername, authenticationSecret, fromAddress, toAddress, messageFile, smtpHost, smtpPort=25):
-        """
-        @param authenticationUsername: The username with which to authenticate.
-        @param authenticationSecret: The password with which to authenticate.
-        @param fromAddress: The SMTP reverse path (ie, MAIL FROM)
-        @param toAddress: The SMTP forward path (ie, RCPT TO)
-        @param messageFile: A file-like object containing the headers and body of
-        the message to send.
-        @param smtpHost: The MX host to which to connect.
-        @param smtpPort: The port number to which to connect.
-
-        @return: A Deferred which will be called back when the message has been
-        sent or which will errback if it cannot be sent.
-        """
-
-        # Create a context factory which only allows SSLv3 and does not verify
-        # the peer's certificate.
-        contextFactory = ClientContextFactory()
-        contextFactory.method = SSLv3_METHOD
-        resultDeferred = Deferred()
-        senderFactory = ESMTPSenderFactory(
-            authenticationUsername,
-            authenticationSecret,
-            fromAddress,
-            toAddress,
-            messageFile,
-            resultDeferred,
-            heloFallback=True,
-            #requireAuthentication=True,
-            #requireTransportSecurity=(True if smtpPort == 587 else False)
-            contextFactory=(contextFactory if smtpPort == 587 else None)
-        )
-
-        if smtpPort == 465:
-            reactor.connectSSL(smtpHost, smtpPort, senderFactory, ClientContextFactory())
-        else:
-            reactor.connectTCP(smtpHost, smtpPort, senderFactory)
-
-        return resultDeferred
-
-    def cbSentMessage(self, result):
-        """
-        Called when the message has been sent.
-
-        Report success to the user and then stop the reactor.
-        """
-        print("Message sent")
-        reactor.stop()
-
-    def ebSentMessage(self, err):
-        """
-        Called if the message cannot be sent.
-
-        Report the failure to the user and then stop the reactor.
-        """
-        err.printTraceback()
-        reactor.stop()
-
-    def send_email_twisted(self, mailing_list, message_content, subject):
-        
-        auth, _ = self.get_config()    
-        
-        message = MIMEText("https://github.com/neuro-rights/atac/blob/main/MOTIVATION.md")
-        message["Subject"] = subject
-        message["From"] = auth["sender"]
-        message["To"] = "; ".join(mailing_list)
-
-        result = self.sendmail(
-            auth["user"],
-            auth["password"],
-            auth["sender"],
-            "; ".join(mailing_list), 
-            io.StringIO("Test"),
-            auth["server"],
-            auth["port"]
-        )
-        result.addCallbacks(self.cbSentMessage, self.ebSentMessage)
-        reactor.run()
 
     def send_email(self, mailing_list, message_content, subject):
         """

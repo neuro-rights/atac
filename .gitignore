@@ -8,3 +8,4 @@ log/
 *.key
 *.log
 *.mdpp
+*.DS_Store
