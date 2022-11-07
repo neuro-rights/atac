@@ -312,6 +312,7 @@ class Config(metaclass=ABCMeta):
             **chat, **compose, **email, **irc, **scrape, **twitter, **tor
         )
         
+        print(os.environ)
         if not "PYTEST_CURRENT_TEST" in os.environ:
             do_email_auth = input("would you like to add an email account (Y/N)? ")
             if do_email_auth == "Y":
