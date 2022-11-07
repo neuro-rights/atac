@@ -18,7 +18,8 @@ messages = [
         "This group of cowards are related to the murders of Alexander Litvinenko in 2006 and Matthew Puncher in 2016 and are responsible for the deaths of 150k people worldwide.",
         "Their M.O. consists of abusing biophotonics to exact cybertorture to induce synthetic states of psychosis in the physical proximity of elderly parents and women in repugnant blue whale suicide games encouraging participation.",
         "If Colegio Militar alumni cross your paths denounce them or shoot first and ask questions later.",
-        "Be extremelly careful with the following repugnant pieces shit: Tiago Goncalves @AEGIS, Nuno Goncalves, Tiago Baleizao @CICLUM and the infamous coward Jasper Kums @EenvoudAgency."
+        "Be extremelly careful with the following repugnant pieces shit: Tiago Goncalves @AEGIS, Nuno Goncalves, Tiago Baleizao @CICLUM and the infamous coward Jasper Kums @EenvoudAgency.",
+        "The Ukranian president youtube speech video where pcp communists left - https://www.youtube.com/watch?v=Wths3_Q-iqA&t=0s"
     ],
     [
         "Lack of Neurorights and the 1917 prophecy of Fatima, or how Colegio Militar alumni (largo da luz, Portugal) and their CM93 three decade long blue-whale suicide games as extrajudicial trials and sentences under the false guise of erradicating class A narcotraffic and promote neurorights and crime prevention brought Vladimir Putin to invade the Ukraine.",
