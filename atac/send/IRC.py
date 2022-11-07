@@ -476,6 +476,15 @@ class ListBotIRCProtocol(irc.IRCClient):
             )
         )
 
+    def irc_PRIVMSG(self, prefix, params):
+        # do some stuff to handle PRIVMSG for your server's setup
+        log.msg(
+            colored(
+                ">>> irc_PRIVMSG {} - {}".format(prefix, params),
+                "red",
+            )
+        )
+
     def irc_NICK(self, prefix, params):
         """
         Description:
@@ -530,7 +539,7 @@ class ListBotIRCProtocol(irc.IRCClient):
         """
 
         log.msg(
-            colored(">>> irc_RPL_LIST {} - {}".format(prefix, params), "grey")
+            colored(">>> irc_RPL_LIST {} - {}".format(prefix, params), "yellow")
         )
         server_tag = prefix.split(".")[-2]
         channel = params[1]
@@ -588,7 +597,7 @@ class ListBotIRCProtocol(irc.IRCClient):
 
         log.msg(
             colored(
-                ">>> irc_RPL_NAMREPLY {} - {}".format(prefix, params), "grey"
+                ">>> irc_RPL_NAMREPLY {} - {}".format(prefix, params), "yellow"
             )
         )
         server_tag = prefix.split(".")[-2]
@@ -657,6 +666,15 @@ class IRCFactory(protocol.ReconnectingClientFactory):
         p = ListBotIRCProtocol(self.description)
         p.factory = self
         return p
+
+    def clientConnectionLost(self, connector, reason):
+        log.msg('Lost connection.  Reason:', reason)
+        protocol.ReconnectingClientFactory.clientConnectionLost(self, connector, reason)
+
+    def clientConnectionFailed(self, connector, reason):
+        log.msg('Connection failed. Reason:', reason)
+        protocol.ReconnectingClientFactory.clientConnectionFailed(self, connector,
+                                                         reason)
 
 
 class SendIRC(Config):
