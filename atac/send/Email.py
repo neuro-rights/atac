@@ -17,7 +17,7 @@ from termcolor import colored
 from tqdm import tqdm
 import validators
 
-from OpenSSL.SSL import SSLv3_METHOD
+#from OpenSSL.SSL import SSLv3_METHOD
 
 from twisted.mail.smtp import ESMTPSenderFactory
 from twisted.python.usage import Options, UsageError
