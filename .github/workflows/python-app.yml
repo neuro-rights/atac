@@ -45,4 +45,4 @@ jobs:
         git submodule update --init
         tree
         mkdir ~/.gnupg
-        python3 atac.py irc
+        pytest -s
