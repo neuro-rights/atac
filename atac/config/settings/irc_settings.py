@@ -12,6 +12,15 @@ ssl = False
 
 messages = [
     [
+        "The real culprits for the war in ukraine are colegio militar alumni who provoked valdimir putin into invading the ukraine.",
+        "Colegio MIlitar is a Portuguese school founded in 1803 in Luz, Portugal, out of which came some of the biggest pieces of shit in the history of humankind.",
+        "Examples of such hate mongering sub-human pigs are Verdier, Luis Nazareth Carvalho Figueira, Rui Ricardo Borges Marques Sabino Reino, Pedro Miguel de Brito Esteves Grilo, Joao Felipe Saraiva Pinheiro, Pedro Miguel Saraiva Pinheiro, Paulo Jorge Varanda, Frederico Ferronha, Tiago Alves, Pedro Antaao, Ricardo Carrilho, Oscar Ferreira, Tiago Goncalves, Nuno Goncalves, Ricardo Rebordao de Brito, Rui Goncalo Pires Pintado, Augusto Tavares, Tercio Freire and many others...",
+        "This group of cowards are related to the murders of Alexander Litvinenko in 2006 and Matthew Puncher in 2016 and are responsible for the deaths of 150k people worldwide.",
+        "Their M.O. consists of abusing biophotonics to exact cybertorture to induce synthetic states of psychosis in the physical proximity of elderly parents and women in repugnant blue whale suicide games encouraging participation.",
+        "If Colegio Militar alumni cross your paths denounce them or shoot first and ask questions later.",
+        "Be extremelly careful with the following repugnant pieces shit: Tiago Goncalves @AEGIS, Nuno Goncalves, Tiago Baleizao @CICLUM and the infamous coward Jasper Kums @EenvoudAgency."
+    ],
+    [
         "Lack of Neurorights and the 1917 prophecy of Fatima, or how Colegio Militar alumni (largo da luz, Portugal) and their CM93 three decade long blue-whale suicide games as extrajudicial trials and sentences under the false guise of erradicating class A narcotraffic and promote neurorights and crime prevention brought Vladimir Putin to invade the Ukraine.",
         "Colegio Militar alumni (largo da luz, Portugal) linked to the CM93 blue-whale suicide group are degrading a Ukranian renal patient daily.",
         "They do so everyday as an interactive ritualistic cybertorture spectacle intensified daily at 4:00 am in front of Elected Government Officials and Law Enforcement.",
@@ -24,16 +33,16 @@ messages = [
         "Their agenda of getting me to promote gay rights with the catholic church on my confirmation rite when I was 15 and teaching my family a moral lesson for calling Colegio Militar too often brought war to our world.",
     ],
     [
-                "Neurorights Activism - The Risk subsidies for law enforcement Scam versus the remote healthcare of the population in the light of khlebnikov's futurist views via Photobiomodulation, Optoacoustic Neuromodulation and Optoacoustic Brain stimulation (Neurotechnologies which have been available for decades).",
-                "These neurotechnologies have been used for the purpose of cognitive augmentation for a selected few and for cognitive degradation in law enforcement social stratification ploys to force people into psychiatry for decades.",
-                "example: Photobiomodulation has similar effects to the Movie Limitless (2011), resorting to bioelectric modulation of PNS and CNS activity via biophotonics (with or without the aid of electroceuticals or even without any form of tethering, just MW and NIR EM radiation as it has been in use since at least 1993, bypassing the need for dangerous pharmaceuticals with side effects).",
-                "Please help erradicate class A Narcotraffic and police scams to increase their average wage via synthetic risk subsidies by spreading the word. Doing so will help towards erradicating demand in narcotraffic, mass scale fraud in the pharmaceutical industry and law enforcement social stratification scams paired with cybertorture.",
-                "The extrajudicial sentences are exacted by colegio militar alumni and recruited criminal associates, below follow some examples.",
-                "Group A: Jose Ricardo Nazareth Carvalho Figueira @PSP, Pedro Miguel de Brito Esteves Grilo @PSP, Pedro Nuno da Silva Rocha, Pedro Ponte, Thyago Picco, Hugo Pereira, Rui Goncalo Pires Pintado, Nuno Goncalves, Ricardo Rebordao de Brito, Joao Felipe Saraiva Pinheiro, Diogo Calado, Bernardo Telles Correia, Oscar Ferreira, Augusto Tavares, Tiago Goncalves @Aegis, Tome Caldeira and Tiago Baleizao @Ciclum Farma.",
-                "Group B: Ivo Francisco (DJ mazivo), Bill Wandi, Carla Maria Marinho Rodrigues and social circle of Rui Pedro Montoya, Pedro Caetano, Andres Castro (DJ Dresh), Thyago Picco, Tiago Santos Sousa and his obnoxious friend Artur, Nuno Correia, Hugo Farinha, Luis Muskiado, Sergio Moreno, Arthur Moreno, Goncalo Bandeira Duarte, Tiago Jorge Roque, Joao Leiria.",
-                "Group C: Jasper Kums, Roy van Putten, Jurgen Braam, Michail Fokke, Bas Baas.",
-                "Group D: Hugo Farinha, Jose Teixeira (bar Crew Hassan), Pedro Silva (Bar a Capela).",
-                "Group E: Andre Martins - Amsterdam and his social circle (Helena Castro Brown, Xavier, MC Knowledge, a disgusting women with prosthetic eye and leg from the north of Portugal and the capo verdians known at Jardim do Adamastor 'Calo' and Marcio).These extrajudicial proceedings are covered up by psychiatrists like Luis Gamito @Julio de Matos, Emile Barkhof @Arkin FACT and Thjs Burger @Arkin HIC - https://github.com/neuro-rights/atac/MOTIVATION.md"
+        "Neurorights Activism - The Risk subsidies for law enforcement Scam versus the remote healthcare of the population in the light of khlebnikov's futurist views via Photobiomodulation, Optoacoustic Neuromodulation and Optoacoustic Brain stimulation (Neurotechnologies which have been available for decades).",
+        "These neurotechnologies have been used for the purpose of cognitive augmentation for a selected few and for cognitive degradation in law enforcement social stratification ploys to force people into psychiatry for decades.",
+        "example: Photobiomodulation has similar effects to the Movie Limitless (2011), resorting to bioelectric modulation of PNS and CNS activity via biophotonics (with or without the aid of electroceuticals or even without any form of tethering, just MW and NIR EM radiation as it has been in use since at least 1993, bypassing the need for dangerous pharmaceuticals with side effects).",
+        "Please help erradicate class A Narcotraffic and police scams to increase their average wage via synthetic risk subsidies by spreading the word. Doing so will help towards erradicating demand in narcotraffic, mass scale fraud in the pharmaceutical industry and law enforcement social stratification scams paired with cybertorture.",
+        "The extrajudicial sentences are exacted by colegio militar alumni and recruited criminal associates, below follow some examples.",
+        "Group A: Jose Ricardo Nazareth Carvalho Figueira @PSP, Pedro Miguel de Brito Esteves Grilo @PSP, Pedro Nuno da Silva Rocha, Pedro Ponte, Thyago Picco, Hugo Pereira, Rui Goncalo Pires Pintado, Nuno Goncalves, Ricardo Rebordao de Brito, Joao Felipe Saraiva Pinheiro, Diogo Calado, Bernardo Telles Correia, Oscar Ferreira, Augusto Tavares, Tiago Goncalves @Aegis, Tome Caldeira and Tiago Baleizao @Ciclum Farma.",
+        "Group B: Ivo Francisco (DJ mazivo), Bill Wandi, Carla Maria Marinho Rodrigues and social circle of Rui Pedro Montoya, Pedro Caetano, Andres Castro (DJ Dresh), Thyago Picco, Tiago Santos Sousa and his obnoxious friend Artur, Nuno Correia, Hugo Farinha, Luis Muskiado, Sergio Moreno, Arthur Moreno, Goncalo Bandeira Duarte, Tiago Jorge Roque, Joao Leiria.",
+        "Group C: Jasper Kums, Roy van Putten, Jurgen Braam, Michail Fokke, Bas Baas.",
+        "Group D: Hugo Farinha, Jose Teixeira (bar Crew Hassan), Pedro Silva (Bar a Capela).",
+        "Group E: Andre Martins - Amsterdam and his social circle (Helena Castro Brown, Xavier, MC Knowledge, a disgusting women with prosthetic eye and leg from the north of Portugal and the capo verdians known at Jardim do Adamastor 'Calo' and Marcio).These extrajudicial proceedings are covered up by psychiatrists like Luis Gamito @Julio de Matos, Emile Barkhof @Arkin FACT and Thjs Burger @Arkin HIC - https://github.com/neuro-rights/atac/MOTIVATION.md"
     ],
     [
         "Exonerate Luis Farinha and all colegio militar alumni in the portuguese police. The Farinha, Poiares, Goncalves and Grilo CM93 Pedo Family gate.",
