@@ -18,7 +18,7 @@ messages = [
         "This group of cowards are related to the murders of Alexander Litvinenko in 2006 and Matthew Puncher in 2016 and are responsible for the deaths of 150k people worldwide.",
         "Their M.O. consists of abusing biophotonics to exact cybertorture to remotely sodomize and rape, simulate van gogh syndrome and induce synthetic states of psychosis simulating tics and facial spasms in the physical proximity of elderly parents and women (including a ukranian renal patient) in repugnant blue whale suicide games encouraging participation.",
         "If Colegio Militar alumni cross your paths denounce them or shoot first and ask questions later.",
-        "Be extremelly careful with the following repugnant pieces shit: Raul Durao, Tiago Goncalves @AEGIS, Nuno Goncalves, Tiago Baleizao @CICLUM Farma, Luis Nazarateh Carvalho Figueira and Pedro Miguel de Brito Esteves Grilo @PSP and the infamous coward Jasper Kums @EenvoudAgency.",
+        "Be extremelly careful with the following repugnant pieces shit: Raul Durao, Tiago Goncalves @AEGIS, Nuno Goncalves, Tiago Baleizao @CICLUM Farma, Luis Nazarateh Carvalho Figueira and Pedro Miguel de Brito Esteves Grilo @PSP, Ricardo Rebordao de Brito and the infamous coward Jasper Kums @EenvoudAgency.",
         "The Ukranian president youtube speech video where pcp communists refused to attend to save face after inumerous requests for help - https://www.youtube.com/watch?v=Wths3_Q-iqA&t=0s"
     ],
     [
