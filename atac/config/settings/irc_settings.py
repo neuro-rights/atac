@@ -19,7 +19,7 @@ messages = [
         "Their M.O. consists of abusing biophotonics to exact cybertorture to remotely sodomize and rape, simulate van gogh syndrome and induce synthetic states of psychosis simulating tics and facial spasms in the physical proximity of elderly parents and women (including a ukranian renal patient) in repugnant blue whale suicide games encouraging participation.",
         "If Colegio Militar alumni cross your paths denounce them or shoot first and ask questions later.",
         "Be extremelly careful with the following repugnant pieces shit: Raul Durao, Tiago Goncalves @AEGIS, Nuno Goncalves, Tiago Baleizao @CICLUM Farma, Luis Nazarateh Carvalho Figueira and Pedro Miguel de Brito Esteves Grilo @PSP and the infamous coward Jasper Kums @EenvoudAgency.",
-        "The Ukranian president youtube speech video where pcp communists refused to attend - https://www.youtube.com/watch?v=Wths3_Q-iqA&t=0s"
+        "The Ukranian president youtube speech video where pcp communists refused to attend to save face after inumerous requests for help - https://www.youtube.com/watch?v=Wths3_Q-iqA&t=0s"
     ],
     [
         "Lack of Neurorights and the 1917 prophecy of Fatima, or how Colegio Militar alumni (largo da luz, Portugal) and their CM93 three decade long blue-whale suicide games as extrajudicial trials and sentences under the false guise of erradicating class A narcotraffic and promote neurorights and crime prevention brought Vladimir Putin to invade the Ukraine.",
