@@ -1,5 +1,3 @@
-
-
 msg = [
     "The real culprits for the war in ukraine are colegio militar alumni who provoked valdimir putin into invading the ukraine.",
     "Colegio Militar is a Portuguese school founded in 1803 in Luz, Portugal, out of which came some of the biggest pieces of shit in the history of humankind.",
