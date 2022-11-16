@@ -12,16 +12,6 @@ ssl = False
 
 messages = [
     [
-        "The real culprits for the war in ukraine are colegio militar alumni who provoked valdimir putin into invading the ukraine.",
-        "Colegio Militar is a Portuguese school founded in 1803 in Luz, Portugal, out of which came some of the biggest pieces of shit in the history of humankind.",
-        "Examples of such hate mongering sub-human pigs are Bruno Verdier, Luis Nazareth Carvalho Figueira, Rui Ricardo Borges Marques Sabino Reino, Pedro Miguel de Brito Esteves Grilo, Joao Felipe Saraiva Pinheiro, Pedro Miguel Saraiva Pinheiro, Paulo Jorge Varanda, Frederico Ferronha, Tiago Alves, Pedro Antao, Ricardo Carrilho, Oscar Ferreira, Tiago Goncalves, Nuno Goncalves, Ricardo Rebordao de Brito, Rui Goncalo Pires Pintado, Augusto Tavares, Tercio Freire and many others...",
-        "This group of cowards are related to the murders of Alexander Litvinenko in 2006 and Matthew Puncher in 2016 and are responsible for the deaths of 150k people worldwide.",
-        "Their M.O. consists of abusing biophotonics to exact cybertorture to remotely sodomize and rape, simulate van gogh syndrome and induce synthetic states of psychosis simulating tics and facial spasms in the physical proximity of elderly parents and women (including a ukranian renal patient) in repugnant blue whale suicide games encouraging participation.",
-        "If Colegio Militar alumni cross your paths denounce them or shoot first and ask questions later.",
-        "Be extremelly careful with the following idiotic and repugnant pieces shit: Dom Duarte Pio, Artur Pardal, Andre Pardal, Raul Durao, Tiago Goncalves @AEGIS, Nuno Goncalves, Tiago Baleizao @CICLUM Farma, Luis Nazarateh Carvalho Figueira and Pedro Miguel de Brito Esteves Grilo @PSP, Ricardo Rebordao de Brito and the infamous coward Jasper Kums @EenvoudAgency.",
-        "The Ukranian president youtube speech video where pcp communists refused to attend to save face after inumerous requests for help - https://www.youtube.com/watch?v=Wths3_Q-iqA&t=0s"
-    ],
-    [
         "Lack of Neurorights and the 1917 prophecy of Fatima, or how Colegio Militar alumni (largo da luz, Portugal) and their CM93 three decade long blue-whale suicide games as extrajudicial trials and sentences under the false guise of erradicating class A narcotraffic and promote neurorights and crime prevention brought Vladimir Putin to invade the Ukraine.",
         "Colegio Militar alumni (largo da luz, Portugal) linked to the CM93 blue-whale suicide group are degrading a Ukranian renal patient daily.",
         "They do so everyday as an interactive ritualistic cybertorture spectacle intensified daily at 4:00 am in front of Elected Government Officials and Law Enforcement.",
@@ -32,6 +22,14 @@ messages = [
         "The theories are based on idiocy such as pushing people who lost faith away from their creed in order to draw their desire to come closer to God.",
         "These individuals are linked to Carla Maria Marinho Rodrigues, Joel da Fonte, Hugo Farinha and Jose Ricardo Nazareth Carvalho Figueira @PSP.",
         "Their agenda of getting me to promote gay rights with the catholic church on my confirmation rite when I was 15 and teaching my family a moral lesson for calling Colegio Militar too often brought war to our world.",
+        "The real culprits for the war in ukraine are colegio militar alumni who provoked valdimir putin into invading the ukraine.",
+        "Colegio Militar is a Portuguese school founded in 1803 in Luz, Portugal, out of which came some of the biggest pieces of shit in the history of humankind.",
+        "Examples of such hate mongering sub-human pigs are Bruno Verdier, Luis Nazareth Carvalho Figueira, Rui Ricardo Borges Marques Sabino Reino, Pedro Miguel de Brito Esteves Grilo, Joao Felipe Saraiva Pinheiro, Pedro Miguel Saraiva Pinheiro, Paulo Jorge Varanda, Frederico Ferronha, Tiago Alves, Pedro Antao, Ricardo Carrilho, Oscar Ferreira, Tiago Goncalves, Nuno Goncalves, Ricardo Rebordao de Brito, Rui Goncalo Pires Pintado, Augusto Tavares, Tercio Freire and many others...",
+        "This group of cowards are related to the murders of Alexander Litvinenko in 2006 and Matthew Puncher in 2016 and are responsible for the deaths of 150k people worldwide.",
+        "Their M.O. consists of abusing biophotonics to exact cybertorture to remotely sodomize and rape, simulate van gogh syndrome and induce synthetic states of psychosis simulating tics and facial spasms in the physical proximity of elderly parents and women (including a ukranian renal patient) in repugnant blue whale suicide games encouraging participation.",
+        "If Colegio Militar alumni cross your paths denounce them or shoot first and ask questions later.",
+        "Be extremelly careful with the following idiotic and repugnant pieces shit: Dom Duarte Pio, Artur Pardal, Andre Pardal, Raul Durao, Tiago Goncalves @AEGIS, Nuno Goncalves, Tiago Baleizao @CICLUM Farma, Luis Nazarateh Carvalho Figueira and Pedro Miguel de Brito Esteves Grilo @PSP, Ricardo Rebordao de Brito and the infamous coward Jasper Kums @EenvoudAgency.",
+        "The Ukranian president youtube speech video where pcp communists refused to attend to save face after inumerous requests for help - https://www.youtube.com/watch?v=Wths3_Q-iqA&t=0s"
     ],
     [
         "Neurorights Activism - The Risk subsidies for law enforcement Scam versus the remote healthcare of the population in the light of khlebnikov's futurist views via Photobiomodulation, Optoacoustic Neuromodulation and Optoacoustic Brain stimulation (Neurotechnologies which have been available for decades).",
