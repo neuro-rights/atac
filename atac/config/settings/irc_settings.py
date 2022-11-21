@@ -66,7 +66,7 @@ responses = [
 ]
 networks = [
     dict(
-        active=True,
+        active=False,
         nickname="pax",
         password="",
         port=6667,
@@ -74,7 +74,7 @@ networks = [
         ssl=False,
     ),
     dict(
-        active=True,
+        active=False,
         nickname="pax",
         password="",
         port=6667,
@@ -82,7 +82,7 @@ networks = [
         ssl=False,
     ),
     dict(
-        active=True,
+        active=False,
         nickname="pax",
         password="",
         port=6667,
@@ -90,7 +90,7 @@ networks = [
         ssl=False,
     ),
     dict(
-        active=True,
+        active=False,
         nickname="pax",
         password="",
         port=6667,
@@ -98,7 +98,7 @@ networks = [
         ssl=False,
     ),
     dict(
-        active=True,
+        active=False,
         nickname="pax",
         password="",
         port=6667,
@@ -106,7 +106,7 @@ networks = [
         ssl=False,
     ),
     dict(
-        active=True,
+        active=False,
         nickname="pax",
         password="",
         port=6667,
@@ -114,7 +114,7 @@ networks = [
         ssl=False,
     ),
     dict(
-        active=True,
+        active=False,
         nickname="pax",
         password="",
         port=6667,
@@ -122,7 +122,7 @@ networks = [
         ssl=False,
     ),
     dict(
-        active=True,
+        active=False,
         nickname="pax",
         password="",
         port=6667,
@@ -135,10 +135,10 @@ networks = [
         password="",
         port=6667,
         server="vianetworks.ptnet.org",
-        ssl=False,
+        ssl=True,
     ),
     dict(
-        active=True,
+        active=False,
         nickname="pax",
         password="",
         port=6667,
