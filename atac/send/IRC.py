@@ -88,20 +88,6 @@ class ListBotIRCProtocol(irc.IRCClient):
 
         self.sendLine("QUIT")
 
-    def _sendMessage(self, msg, target, nick=None):
-        """
-        Description:
-        ------------
-
-        Parameters:
-        -----------
-
-        """
-
-        if nick:
-            msg = "%s, %s" % (nick, msg)
-        self.msg(target, msg)
-
     def _showError(self, failure):
         """
         Description:
@@ -734,7 +720,7 @@ class SendIRC(Config):
         """
         endpoint = endpoints.clientFromString(
             reactor,
-            "ssl:host={}:port={}".format(description["network"]["server"], 6697),
+            "tcp:host={}:port={}".format(description["network"]["server"], 6667),
         )
         factory = IRCFactory(description)
         d = endpoint.connect(factory)
