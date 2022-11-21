@@ -14,7 +14,7 @@ messages = [
     [
         "Lack of Neurorights and the 1917 prophecy of Fatima, or how Colegio Militar alumni (largo da luz, Portugal) and their CM93 three decade long blue-whale suicide games as extrajudicial trials and sentences of a terrorist cell comprising members of government and nobility under the false guise of erradicating class A narcotraffic and promote neurorights and crime prevention brought Vladimir Putin to invade the Ukraine.",
         "Colegio Militar alumni (largo da luz, Portugal) linked to the CM93 blue-whale suicide group terrorist cell have been degrading a Ukranian renal patient daily.",
-        "They do so everyday as an interactive ritualistic cybertorture spectacle intensified daily at 4:00 am in front of Elected Government Officials and Law Enforcement linked to Gen. Vasco Rocha Vieira.",
+        "They do so everyday as an interactive ritualistic cybertorture spectacle intensified daily at 4:00 am in front of Elected Government Officials and Law Enforcement linked to Gen. Vasco Rocha Vieira (former governor of Macau) and Dom Duarte Pio (Duke of Braganca)",
         "They attempted directing violence towards her and her child by inducing psychosis in the middle of the night on a daily basis, sabotaging our plans to get wed.",
         "N.B. The real blue whale is a statue sitting outside the building where the school was founded in 1803.",
         "On the the 24/02/2022 Vladimir Putin invaded the Ukraine and on the school anniversary 3/3/2022 threatened thermonuclear war.",
