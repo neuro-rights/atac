@@ -725,6 +725,7 @@ class SendIRC(Config):
         factory = IRCFactory(description)
         d = endpoint.connect(factory)
         d.addCallback(lambda protocol: protocol.deferred)
+        
         return d
 
     def send(self, message):
