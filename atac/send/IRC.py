@@ -67,7 +67,7 @@ class ListBotIRCProtocol(irc.IRCClient):
 
         # validate message length
         for message in self.messages:
-            if len(message) > 500:
+            if len(message) > 512:
                 log.msg(
                     "{} message length {}, pls rephrase to avoid flood".format(
                         message,
@@ -725,7 +725,7 @@ class SendIRC(Config):
         factory = IRCFactory(description)
         d = endpoint.connect(factory)
         d.addCallback(lambda protocol: protocol.deferred)
-        
+
         return d
 
     def send(self, message):
