@@ -4,7 +4,7 @@ import atac
 def test_send_email():
     """ """
     #
-    katie = atac.SendIRC(encrypted_config, config_file, key_file)
+    katie = atac.SendIRC(false, "auth.json", None)
     status = katie.send()
 
     assert (status == 0) is True
