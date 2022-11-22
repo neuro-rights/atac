@@ -720,7 +720,7 @@ class SendIRC(Config):
         """
         endpoint = endpoints.clientFromString(
             reactor,
-            "tcp:host={}:port={}".format(description["network"]["server"], 6667),
+            "ssl:host={}:port={}".format(description["network"]["server"], 6697),
         )
         factory = IRCFactory(description)
         d = endpoint.connect(factory)
