@@ -1,4 +1,3 @@
-from ctypes.wintypes import LANGID
 from ..config.Config import Config
 from ..util.Util import trace, get_file_content, fast_scandir
 from ..art.Art import Art
