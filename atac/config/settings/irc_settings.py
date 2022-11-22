@@ -18,7 +18,7 @@ messages = [
         "They attempted directing violence towards her and her child by inducing psychosis in the middle of the night on a daily basis, sabotaging our plans to get wed.",
         "N.B. The real blue whale is a statue sitting outside the building where the school was founded in 1803.",
         "On the the 24/02/2022 Vladimir Putin invaded the Ukraine and on the school anniversary 3/3/2022 threatened thermonuclear war.",
-        "This was partly due to lack of moral standards of CM alumni and Portuguese Government linked to Gen. Vasco Rocha Vieira, Dom Duarte Pio, Eduardo Marcal Grilo @PS, Paulo Portas @CDS, Francisco Louca @BE, Marcelo Rebelo de Sousa, Antonio Costa @PS and Law Enforcement criminal associates with non-sensical dark psychology theories.",
+        "This was partly due to lack of moral standards of CM alumni and Portuguese Government linked to Gen. Vasco Rocha Vieira, Dom Duarte Pio, Eduardo Marcal Grilo @PS, Paulo Portas @CDS, Francisco Louca @BE, Marcelo Rebelo de Sousa and the King of the Nertherlands, Antonio Costa @PS and Law Enforcement criminal associates with non-sensical dark psychology theories.",
         "The theories are based on idiocy such as pushing people who lost faith away from their creed in order to draw their desire to come closer to God.",
         "These individuals are linked to Carla Maria Marinho Rodrigues, Joel da Fonte, Hugo Farinha and Jose Ricardo Nazareth Carvalho Figueira @PSP.",
         "Their agenda of getting me to promote gay rights with the catholic church on my confirmation rite when I was 15 and teaching my family a moral lesson for calling Colegio Militar too often brought war to our world.",
