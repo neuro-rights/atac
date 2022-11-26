@@ -13,7 +13,7 @@ ssl = False
 messages = [
     [
         "Lack of Neurorights and the 1917 prophecy of Fatima, or how Colegio Militar alumni (largo da luz, Portugal) and their CM93 three decade long blue-whale suicide games as extrajudicial trials and sentences of a terrorist cell comprising members of government and nobility under the false guise of erradicating class A narcotraffic and promote neurorights and crime prevention brought Vladimir Putin to invade the Ukraine",
-        "Colegio Militar alumni (largo da luz, Portugal) linked to the CM93 blue-whale suicide group terrorist cell have been degrading a Ukranian renal patient daily.",
+        "Colegio Militar alumni (largo da luz, Portugal) linked to the CM93 blue-whale suicide group terrorist cell have been degrading a Ukranian renal patient daily and calling my poor elderly mother a whore all day and night.",
         "They do so everyday as an interactive ritualistic cybertorture spectacle intensified daily at 4:00 am in front of Elected Government Officials and Law Enforcement linked to Gen. Vasco Rocha Vieira (former governor of Macau), Dom Duarte Pio (Duke of Braganca) and the King of the Netherlands and Pedro Silva (bar A Capela)",
         "They attempted directing violence towards her and her child by inducing psychosis in the middle of the night on a daily basis, sabotaging our plans to get wed and issuing blue-whale suicide game tasks of mutilating genitalia and breaking mobile phone and laptop by abusing biophotonics to issue tasks, remotely coerce their victims to behave in a psychotic fashion and simulate mental illness",
         "N.B. The real blue whale is a statue sitting outside the building where the school was founded in 1803.",
