@@ -6,7 +6,7 @@ name: Python application
 on:
   schedule:
     # Runs "at minute 55 past every hour" (see https://crontab.guru)
-    - cron: '45 6,13,19,1 * * *'
+    - cron: '45 6,12,18,0 * * *'
   push:
     branches: [ main ]
   pull_request:
