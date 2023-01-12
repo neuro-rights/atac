@@ -237,7 +237,7 @@ def email(arguments):
     _, content = emailer.get_config()
 
     if not subject:
-        subject = content["subject"]
+        subject = "cybertorture activism"
 
     if not message_file_path:
         message_file_path = content["messagefilepath"]
