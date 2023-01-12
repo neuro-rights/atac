@@ -194,9 +194,9 @@ class SendEmail(Config):
                 #self.send_email_twisted(email_batch, message_content, subject)
 
                 progress.update(1)
-                print("Sleeping for {} seconds...".format(self.email["emailthrottleinterval"]))
-                print("To change the throttle value edit your json config file")
-                time.sleep(self.email["emailthrottleinterval"])
+                #print("Sleeping for {} seconds...".format(self.email["emailthrottleinterval"]))
+                #print("To change the throttle value edit your json config file")
+                #time.sleep(self.email["emailthrottleinterval"])
 
     def store_emails_in_buckets(self, lines):
         """
