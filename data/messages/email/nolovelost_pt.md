@@ -16,4 +16,4 @@ O abuso de biofotonica para idiotas se divertirem induzindo estados psicoticos s
 
 Sem mais...
 
-<p align="center" width="100%"><img src="https://raw.githubusercontent.com/neuro-rights/atac/main/data/assets/img/jesus/mary.png"></p>
+<p align="center" width="100%"><img src="https://raw.githubusercontent.com/neuro-rights/atac/main/data/assets/img/jesus/stella_maris.png"></p>
