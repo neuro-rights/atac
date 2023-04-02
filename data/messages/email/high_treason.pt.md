@@ -2,8 +2,6 @@
 
 Ricardo Rebordão de Brito em associação criminosa com outros ex-alunos do curso de saída de 1995 (entre muitos outros como o infame CM93), em associação criminosa com Paulo Portas, Eduardo Marcal Grilo, o primeiro ministro António Costa e o irmão Ricardo Costa em associação criminosa com ex-alunos do colégio militar (largo da luz, Portugal) ligados a João Filipe Saraiva Pinheiro, Pedro Miguel de Brito Esteves Grilo, Pedro de Queiroz Antao, Rui Ricardo Borges Marques Sabino Reino, Pedro Nuno da Silva Rocha e muitos mais montaram um espetáculo de cibertortura vibrotactil para simular síndroma de Van Gogh e articulação de línguas tão grotesco que corresponde a alta traição ao povo português, sendo torturado durante anos por cobardes recrutados pelo bairro alto e jardim do adamastor para dirigir violência contra mulheres e os meus pais num ritual de cibertortura vibrotactil repugnante para simular esquizofrenia, perder a casa e ser obrigado a voltar a Portugal para jogarem com a integridade física de pessoal médico, mulheres e idosos induzindo estados de psicose em formato de jogada estocástica "a ver se da" para forcar internamentos compulsivos, suicídios ou violência dirigida resultando em internamentos, prisão ou suicidio.
 
-<p align="center" width="100%"><img src="https://raw.githubusercontent.com/strikles/atac/main/data/assets/img/alumni/rrb.png"></p>
+<p align="center" width="100%"><img src="https://raw.githubusercontent.com/neuro-rights/atac/main/data/assets/img/alumni_police/alumni_police.gif"></p>
 
-<p align="center" width="100%"><img src="https://raw.githubusercontent.com/strikles/atac/main/data/assets/img/alumni_police/alumni_police.gif"></p>
-
-<p align="center" width="100%"><img src="https://raw.githubusercontent.com/strikles/atac/main/data/assets/img/politicians/politicians.gif"></p>
+<p align="center" width="100%"><img src="https://raw.githubusercontent.com/neuro-rights/atac/main/data/assets/img/politicians/politicians.gif"></p>
