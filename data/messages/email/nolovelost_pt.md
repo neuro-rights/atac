@@ -12,6 +12,9 @@ Vossas excelencias podiam sair do trabalho pelas 5:00 - 6:00 da tarde, mas em ve
 
 O abuso de biofotonica para idiotas se divertirem induzindo estados psicoticos sinteticos com cibertortura continuada escolhendo momentos na presenca de idosos (como os meus pais no fim da vida para jogarem violencia contra os mesmos), mulheres e criancas (sistematicamente varias vezes por dia e a meio da noite durante anos como hienas cobardes agindo em bando - GANG) participando em jogos de suicidio tipo baleia-azul em formato de orgia / espectaculo interactivo para simularem sindroma de Van Gogh.
 
+<p align="center" width="100%"><img src="https://raw.githubusercontent.com/neuro-rights/atac/main/data/assets/img/jardim_adamastor/jardim_adamastor.gif"></p>
+
+
 <p align="center" width="100%"><img src="https://raw.githubusercontent.com/neuro-rights/atac/main/data/assets/img/alumni_police/alumni_police.gif"></p>
 
 Sem mais...
