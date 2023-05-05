@@ -145,18 +145,12 @@ class SendEmail(Config):
         auth, _ = self.get_config()
         html_content = Compose.md2html(message_content)
 
-        auth_obj = dict(host=auth["server"], port=auth["port"], attempts=3, delay=3)
-        if "user" in auth:
-            auth_obj["user"]=auth["user"]
-        if "password" in auth:
-            auth_obj["password"]=auth["password"]
-
         try:
 
             print(";".join(mailing_list))
             envelope = Envelope().message(html_content).subject(subject)
             envelope = envelope.from_(auth["sender"]).to(";".join(mailing_list))
-            envelope = envelope.smtp(auth_obj)
+            envelope = envelope.smtp(auth["server"], auth["port"], auth["user"], auth["password"])
 
             recipients_status = envelope.check(check_mx=True, check_smtp=True)
             print(recipients_status)
