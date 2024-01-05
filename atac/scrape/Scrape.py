@@ -267,7 +267,7 @@ class Scrape(Config):
         """
 
         # primary queue (urls to be crawled)
-        self.primary_unprocessed_urls.append(starting_url)
+        self.primary_unprocessed_urls.appendleft(starting_url)
 
         # secondary queue
         self.secondary_unprocessed_urls.clear()
@@ -386,17 +386,6 @@ class Scrape(Config):
 
             # move next url from queue to set of processed urls
             url = self.primary_unprocessed_urls.popleft()
-            print(colored("{0} urls:{1} {2} | emails:{3} phones:{4} - {5}".format(
-                    threading.get_native_id(),
-                    len(self.primary_unprocessed_urls),
-                    len(self.secondary_unprocessed_urls),
-                    len(self.emails),
-                    len(self.phones),
-                    url,
-                ),
-                "white",
-                "on_green"
-            ))
 
             self.processed_urls.add(url)
 
@@ -409,5 +398,17 @@ class Scrape(Config):
                 self.save_emails_phones(data_key, response.text)
                 links = response.html.absolute_links
                 self.process_links(url, links)
+
+                print(colored("{0} urls:{1} {2} | emails:{3} phones:{4} - {5}".format(
+                        threading.get_native_id(),
+                        len(self.primary_unprocessed_urls),
+                        len(self.secondary_unprocessed_urls),
+                        len(self.emails),
+                        len(self.phones),
+                        url,
+                    ),
+                    "white",
+                    "on_green"
+                ))
 
         return status
