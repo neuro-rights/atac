@@ -1,0 +1,4 @@
+[console_scripts]
+atac = atac.main:main
+markdown-pp = MarkdownPP.main:main
+

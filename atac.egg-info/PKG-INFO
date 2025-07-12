@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: atac
+Version: 0.1
+Summary: activism tools
+Home-page: https://github.com/strikles/atac
+Author: strikles
+Author-email: strikles@gmail.com
+License: MIT
+Download-URL: https://github.com/strikles/atac/archive/v_01.tar.gz
+Keywords: activism,scrape,cybertorture
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+
+UNKNOWN
+

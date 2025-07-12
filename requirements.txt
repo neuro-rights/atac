@@ -13,8 +13,8 @@ envelope
 Faker
 language_tool_python
 latex2mathml
-lxml
-git+https://github.com/strikles/markdown-pp.git@master
+lxml-html-clean
+git+https://github.com/neuro-rights/markdown-pp.git@master
 markovify
 mistune==2.0.2
 nltk

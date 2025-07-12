@@ -3,7 +3,10 @@ import csv
 from tqdm import tqdm
 
 import validators
-from validators import ValidationFailure
+
+"""
+from validators import ValidationError
+"""
 
 import phonenumbers
 from phonenumbers import NumberParseException, phonenumberutil
