@@ -63,8 +63,9 @@ invalid=dict(
         ".yji",
         ".css",
         ".js",
+        ".ashx"
     ],
-    paths=["forum", "admin", "auth"],
+    paths=["forum", "admin", "auth", "pdf"],
 )
 proxies=dict(http="http://10.10.1.10:3128", https="http://10.10.1.10:1080")
 targets=dict(

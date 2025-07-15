@@ -10,8 +10,15 @@ import mistune
 import os
 import random
 import re
+
 import ssl
-import sys
+import smtplib
+from email import encoders
+from email.message import EmailMessage
+from email.mime.base import MIMEBase
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+
 import time
 from termcolor import colored
 from tqdm import tqdm
@@ -143,19 +150,19 @@ class SendEmail(Config):
 
         status = 0
         auth, _ = self.get_config()
-        html_content = Compose.md2html(message_content)
+        body = Compose.md2html(message_content)
+        recipients = ", ".join(mailing_list)
 
         try:
 
-            print(";".join(mailing_list))
-            envelope = Envelope().message(html_content).subject(subject)
-            envelope = envelope.from_(auth["sender"]).to(";".join(mailing_list))
+            print(recipients)
+            envelope = Envelope().message(body).subject(subject)
+            envelope = envelope.from_(auth["sender"]).to(recipients)
             envelope = envelope.smtp(auth["server"], auth["port"], auth["user"], auth["password"])
-
             recipients_status = envelope.check(check_mx=True, check_smtp=True)
             print(recipients_status)
-
             envelope.send(send=False).send(send=True)
+
 
         except Exception as err:
             status = err
