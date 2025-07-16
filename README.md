@@ -60,7 +60,7 @@ source <venv>/bin/activate
 ```
 or 
 
-Activate virtual environment Windows (cmd)
+Activate virtual environment Windows (Powershell)
 ```python
 PS C:\> <venv>\Scripts\Activate.ps1
 ```
