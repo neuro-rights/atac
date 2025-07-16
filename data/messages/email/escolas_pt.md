@@ -1,5 +1,3 @@
-<p align="center" width="100%"><img src="https://raw.githubusercontent.com/neuro-rights/atac/main/data/assets/img/jesus/jesus_king.png"></p>
-
 Tenho nojo e vergonha de ser ex-aluno do colégio militar…
 
 <p align="center" width="100%"><img src="https://raw.githubusercontent.com/neuro-rights/atac/main/data/assets/img/alumni_police/colegio.png"></p>
@@ -19,3 +17,5 @@ Abaixo seguem alguns dos envolvidos na execução de sentenças extrajudiciais d
 Aqui segue um dos individuos envolvidos na execução de sentenças extrajudiciais de cibertortura ligados à maçonaria
 
 <p align="center" width="100%"><img src="https://raw.githubusercontent.com/neuro-rights/atac/main/data/assets/img/alumni/oscar_ferreira.png"></p>
+
+<p align="center" width="100%"><img src="https://raw.githubusercontent.com/neuro-rights/atac/main/data/assets/img/jesus/jesus_king.png"></p>
