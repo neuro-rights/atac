@@ -70,10 +70,12 @@ Install dependencies
 pip3 install -r requirements.txt
 ```
 
+Create contacts
 ```python
 python3 atac.py scrape -u url_to_scrape
 ```
 
+Send Email to contacts created above
 ```python
 python3 atac.py email -p path_to_csv -m path_to_message -s subject
 ```
