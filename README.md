@@ -49,10 +49,23 @@ it is based on [https://chato.cl/papers/castillo_06_controlling_queue_size_web_c
 
 ### Usage
 
+Create a virtual environment
 ```python
 python3 -m venv env
 ```
 
+Activate virtual environment POSIX (bash)
+```python
+source <venv>/bin/activate
+```
+or 
+
+Activate virtual environment Windows (cmd)
+```python
+PS C:\> <venv>\Scripts\Activate.ps1
+```
+
+Install dependencies
 ```python
 pip3 install -r requirements.txt
 ```
