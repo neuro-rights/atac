@@ -58,6 +58,7 @@ Activate virtual environment POSIX (bash)
 ```python
 source <venv>/bin/activate
 ```
+
 or 
 
 Activate virtual environment Windows (Powershell)
@@ -84,5 +85,3 @@ Send IRC
 ```python
 python3 atac.py irc
 ```
-
-See Motivation for more details (MOTIVATION.md)
