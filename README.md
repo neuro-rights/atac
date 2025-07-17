@@ -85,4 +85,4 @@ Send IRC
 python3 atac.py irc
 ```
 
-See Motivation for more details](MOTIVATION.md)
+See Motivation for more details (MOTIVATION.md)
