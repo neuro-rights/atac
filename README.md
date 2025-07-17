@@ -80,6 +80,8 @@ Send Email to contacts created above
 python3 atac.py email -p path_to_csv -m path_to_message -s subject
 ```
 
-[See Motivation for more details](MOTIVATION.md)
+Send IRC
+```python
+python3 atac.py irc
 
-
+See Motivation for more details](MOTIVATION.md)
