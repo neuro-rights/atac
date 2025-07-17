@@ -59,6 +59,8 @@ class ListBotIRCProtocol(irc.IRCClient):
         self.hostname = description["network"]["server"]
         self.nickname = description["network"]["nickname"]  # nickname
         self.password = description["network"]["password"]  # server pass
+        self.port = description["network"]["port"] 
+        self.security = description["network"]["tls"] 
         self.messages = description["messages"]
         self._names_callback = {}
         self._list_callback = {}
@@ -646,6 +648,7 @@ class IRCFactory(protocol.ReconnectingClientFactory):
     def __init__(self, description):
         """ """
         self.description = description
+        #print(self.description)
 
     def buildProtocol(self, addr):
         """ """
@@ -720,7 +723,7 @@ class SendIRC(Config):
         """
         endpoint = endpoints.clientFromString(
             reactor,
-            "ssl:host={}:port={}".format(description["network"]["server"], 6697),
+            "tls:host={}:port={}".format(description["network"]["server"], 6697),
         )
         factory = IRCFactory(description)
         d = endpoint.connect(factory)
