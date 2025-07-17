@@ -83,5 +83,6 @@ python3 atac.py email -p path_to_csv -m path_to_message -s subject
 Send IRC
 ```python
 python3 atac.py irc
+```
 
 See Motivation for more details](MOTIVATION.md)
